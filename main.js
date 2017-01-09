@@ -255,11 +255,13 @@ var triplebarr = [
 	{barrelType: 0, length: 42, width: 19, angle: 300, offsetX: 0, damage: 1, penetration: 1}
 ];
 var pentabarr = [
-	{barrelType: 0, length: 36, width: 19, angle: 60, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 36, width: 19, angle: 300, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 39, width: 19, angle: 30, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 39, width: 19, angle: 330, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 34, width: 19, angle: 40, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 34, width: 19, angle: 320, offsetX: 0, damage: 1, penetration: 1},
+	
+	{barrelType: 0, length: 43, width: 19, angle: 20, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 43, width: 19, angle: 340, offsetX: 0, damage: 1, penetration: 1},
+	
+	{barrelType: 0, length: 48, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
 ];
 var necrobarr = [
 	{barrelType: 1, length: 34, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1}
