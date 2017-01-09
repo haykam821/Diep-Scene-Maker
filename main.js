@@ -87,8 +87,8 @@ function handleClick(evt){
 		getClassBarrels(classInput.value)
 		);*/
 		if (!isMakingTank){
-		makeTankX = mouseX;
-		makeTankY = mouseY;
+		makeTankX = mouseX+window.pageXOffset;
+		makeTankY = mouseY+window.pageYOffset;
 		};
 		
 		if (isMakingTank){
