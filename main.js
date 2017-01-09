@@ -87,8 +87,8 @@ function handleClick(evt){
 		getClassBarrels(classInput.value)
 		);*/
 		if (!isMakingTank){
-		makeTankX = mouseX+window.pageXOffset;
-		makeTankY = mouseY+window.pageYOffset;
+		makeTankX = mouseX;
+		makeTankY = mouseY;
 		};
 		
 		if (isMakingTank){
@@ -338,6 +338,8 @@ function getClassBarrels(className){
 		return twinflankbarr;
 		} else if (className == "triplet"){
 		return tripletbarr;
+		} else if (className == "penta"){
+		return pentabarr;
 		} else if (className == "triangle"){
 		return trianglebarr;
 		} else if (className == "booster"){
@@ -359,6 +361,7 @@ function getClassBarrels(className){
 function getClassBodyType(className){
 	if(
 	className == "basic" || 
+	className == "ac" || 
 	className == "sniper" || 
 	className == "assassin" || 
 	className == "hunter" || 
@@ -372,7 +375,8 @@ function getClassBodyType(className){
 	className == "twinflank" || 
 	className == "triplet" || 
 	className == "triangle" || 
-	className == "booster"
+	className == "booster" ||
+	className == "penta"
 	){
 		return "circle";
 	};
@@ -381,6 +385,16 @@ function getClassBodyType(className){
 	className == "factory"
 	){
 		return "square";
+	};
+	if(
+	className == "dom"
+	){
+		return "dominator";
+	};
+	if(
+	className == "ms"
+	){
+		return "mothership";
 	};
 	if(className == "custom"){
 		return btypeInput.value;
