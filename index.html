@@ -16,12 +16,30 @@
 		
 		<canvas id="canvas" width=1280 height=720 style="position:absolute; left: 0px; top: 0px;" onclick="handleClick()"></canvas>
 		<input type="text" name="Level" id="levelInput" value="1" style='position:absolute; top:750px; left:100px;'></input>
-		<input type="color" name="Color" id="colorInput" value="#00B2E1" style='position:absolute; top:770px; left:100px;'></input>
-		<button onclick = 'setColorInput("#00B2E1")' style='position:absolute; top:770px; left:165px;'>Blue</button>
-		<button onclick = 'setColorInput("#F14E54")' style='position:absolute; top:770px; left:215px;'>Red</button>
-		<button onclick = 'setColorInput("#00E16E")' style='position:absolute; top:770px; left:265px;'>Green</button>
-		<button onclick = 'setColorInput("#BF7FF5")' style='position:absolute; top:770px; left:325px;'>Purple</button>
-		<button onclick = 'setColorInput("#FFE869")' style='position:absolute; top:770px; left:385px;'>Yellow</button>
+	
+		<input type="color" name="Color" id="colorInput"  value="#00B2E1" style='position:absolute; top:770px; left:100px;'></input>	
+	<select id='colors' style='position:absolute; top:770px; left:165px;'>
+			<option>Pick a color</option>
+			<option value='#00B2E1'>Blue</option>
+			<option value='#F14E54'>Red</option>
+			<option value='#00E16E'>Green</option>
+			<option value='#BF7FF5'>Purple</option>
+			<option value='#D48067'>Brown</option>
+			<option value='#FFE869'>Yellow</option>
+			<option value='#C0C0C0'>Fallen Gray</option>
+			<option value='#EF7BDB'>Crasher Magenta</option>
+			<option value='#7790F9'>Pentagon Blue</option>
+			<option value='#FAC27C'>Necromancer Square Orange</option>
+			<option value='#FA777A'>Triangle/Defender Red</option>
+			<option value='#8DFD71'>Green Shape Green</option>
+			<option value='#555555'>Outline Gray</option>
+			<option value='#999999'>Barrel Gray</option>
+		</select>
+		<script>
+			document.getElementById('colors').onchange = function(){
+				setColorInput(document.getElementById('colors').value);
+			}
+		</script>
 		<input type="text" name="Name" id="nameInput" value="Tank" style='position:absolute; top:790px; left:100px;'></input>
 		<!--<input type="text" name="Class" id="classInput" value="basic" style='position:absolute; top:810px; left:100px;'></input>-->
 		<select id="classInput" style='position:absolute; top:810px; left:100px;'>
