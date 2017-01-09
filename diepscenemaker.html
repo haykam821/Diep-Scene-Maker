@@ -1,0 +1,81 @@
+<html>
+
+
+	<!DOCTYPE html>
+	<head>
+		<title>Diep.io scene maker</title>
+		<meta charset="utf8"></meta>
+		<script src='main.js'></script>
+
+	</head>
+
+
+<body onload="handleOnLoad()">
+
+	<div id="editor">
+		
+		<canvas id="canvas" width=1280 height=720 style="position:absolute; left: 0px; top: 0px;" onclick="handleClick()"></canvas>
+		<input type="text" name="Level" id="levelInput" value="1" style='position:absolute; top:750px; left:100px;'></input>
+		<input type="color" name="Color" id="colorInput" value="#00B2E1" style='position:absolute; top:770px; left:100px;'></input>
+		<button onclick = 'setColorInput("#00B2E1")' style='position:absolute; top:770px; left:165px;'>Blue</button>
+		<button onclick = 'setColorInput("#F14E54")' style='position:absolute; top:770px; left:215px;'>Red</button>
+		<button onclick = 'setColorInput("#00E16E")' style='position:absolute; top:770px; left:265px;'>Green</button>
+		<button onclick = 'setColorInput("#BF7FF5")' style='position:absolute; top:770px; left:325px;'>Purple</button>
+		<button onclick = 'setColorInput("#FFE869")' style='position:absolute; top:770px; left:385px;'>Yellow</button>
+		<input type="text" name="Name" id="nameInput" value="Tank" style='position:absolute; top:790px; left:100px;'></input>
+		<!--<input type="text" name="Class" id="classInput" value="basic" style='position:absolute; top:810px; left:100px;'></input>-->
+		<select id="classInput" style='position:absolute; top:810px; left:100px;'>
+			<option value="basic">Basic Tank</option>
+			<option value="ac">Arena Closer</option>
+			<option value="sniper">Sniper</option>
+			<option value="assassin">Assasin</option>
+			<option value="hunter">Hunter</option>
+			<option value="predator">Predator</option>
+			<option value="dom">Dominator</option>
+			<option value="ms">Mothership</option>
+			<option value="trapper">Trapper</option>
+			<option value="megatrapper">Mega Trapper</option>
+			<option value="overlord">Overlord</option>
+			<option value="manager">Manager</option>
+			<option value="twin">Twin</option>
+			<option value="triplet">Triplet</option>
+			<option value="tripletwin">Triple Twin</option>
+			<option value="twinflank">Twin Flank</option>
+			<option value="triangle">Tri-angle</option>
+			<option value="booster">Booster</option>
+			<option value="necro">Necromancer</option>
+			<option value="factory">Factory</option>
+			<option value="custom">Custom</option>
+		</select>
+		<!--<input type="text" name="BodyType" id="btypeInput" value="circle" style='position:absolute; top:830px; left:100px;'></input>-->
+		<select id="btypeInput" style='position:absolute; top:830px; left:100px;'>
+			<option value="circle">Circle</option>
+			<option value="square">Square</option>
+			<option value="triangle">Triangle</option>
+			<option value="pentagon">Pentagon</option>
+			<option value="smasher">Smasher</option>
+			<option value="landmine">Landmine</option>
+			<option value="spike">Spike</option>
+			<option value="dominator">Dominator</option>
+		</select>
+		<textarea name="BarrelArray" id="barrelsInput" value="[]" style='position:absolute; top:850px; left:500px;'></textarea>
+		<p style='position:absolute; top:730px; left:10px;'>Level: </p>
+		<p style='position:absolute; top:750px; left:10px;'>Color: </p>
+		<p style='position:absolute; top:770px; left:10px;'>Name: </p>
+		<p style='position:absolute; top:790px; left:10px;'>Class: </p>
+		<p style='position:absolute; top:810px; left:10px;'>BodyType: </p>
+		<p style='position:absolute; top:810px; left:450px;'>Custom Barrel Array (optional): </p>
+		<button id="exportButton" onclick="exporttank()" style='position:absolute; top:730px; left:500px;'>Export to JSON</button>
+		<button id="importButton" onclick="importtank()" style='position:absolute; top:730px; left:620px;'>Import JSON</button>
+		<textarea id="scenecodeText" style='position:absolute; top:760px; left:500px;'></textarea>
+		<script src='renderer.js'></script>
+	</div>
+
+</body>
+
+
+
+
+
+
+</html>
