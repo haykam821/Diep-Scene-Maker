@@ -378,7 +378,8 @@ function getClassBodyType(className){
 	className == "triplet" || 
 	className == "triangle" || 
 	className == "booster" ||
-	className == "penta"
+	className == "penta" ||
+	className == "octo"
 	){
 		return "circle";
 	};
