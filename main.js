@@ -406,7 +406,8 @@ function getClassBodyType(className){
 	};
 	if(
 	className == "necro" || 
-	className == "factory"
+	className == "factory" ||
+	className == "summoner"
 	){
 		return "square";
 	};
