@@ -310,10 +310,6 @@ function getClassBarrels(className){
 		return [
 			{barrelType: 0, length: 34, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
 		];
-		} else if (className == "summoner"){
-		return summonerbarr;
-		} else if (className == "guardian"){
-		return guardianbarr;
 		} else if (className == "dom"){
 		return [
 			{barrelType: 3, length: 34, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
@@ -371,6 +367,10 @@ function getClassBarrels(className){
 		return fighterbarr;
 		} else if (className == "necro"){
 		return necrobarr;
+		} else if (className == "summ"){
+		return summbarr;
+		} else if (className == "guard"){
+		return guardbarr;
 		} else if (className == "factory"){
 		return factorybarr;
 		} else if (className == "custom"){
@@ -409,6 +409,11 @@ function getClassBodyType(className){
 	className == "factory"
 	){
 		return "square";
+	};
+	if(
+	className == "guard"
+	){
+		return "triangle";
 	};
 	if(
 	className == "dom"
