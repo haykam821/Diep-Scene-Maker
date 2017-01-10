@@ -312,15 +312,16 @@ function drawPenta(pentaX,pentaY,pentaAng,pentaSize,pentaColor) {
 	ctx.fillStyle = "#7777ff";
 	ctx.strokeStyle = "#555555";
 	ctx.lineJoin = "round";
+	ctx.lineWidth = 4/(pentaSize);
 	ctx.beginPath();
 	var pentaA = ((Math.PI * 2)/5);
 	ctx.translate(pentaX,pentaY);
 	ctx.rotate(degToRad(pentaAng));
-	ctx.moveTo(pentaSize,0);
+	ctx.scale(pentaSize,pentaSize);
+	ctx.moveTo(1,0);
 	for (var pentaI = 1; pentaI < 7; pentaI++) {
-		ctx.lineTo(pentaSize*Math.cos(pentaA*pentaI),pentaSize*Math.sin(pentaA*pentaI));
+		ctx.lineTo(Math.cos(pentaA*pentaI),Math.sin(pentaA*pentaI));
 	}
-	ctx.lineWidth = 4/(pentaSize/40);
 	ctx.fill()
 	ctx.stroke();
 	ctx.translate(-1*pentaX,-1*pentaY);
@@ -365,11 +366,32 @@ function renderStep(){
 	
 	for(var i=0;i<entity.length;i++){
 		var ent = entity[i];
-		drawTank(ent.x,ent.y,ent.angle,levelToSize(ent.level),ent.color,ent.barrels,ent.bodyType,ent.name,ent.health/100);
+		if (ent.entityType == "tank"){
+			drawTank(ent.x,ent.y,ent.angle,levelToSize(ent.level),ent.color,ent.barrels,ent.bodyType,ent.name,ent.health/100);
+		};
+		if (ent.entityType == "shape"){ 
+			if (ent.classT == "square"){
+				drawSquare(ent.x,ent.y,ent.angle,16,ent.color);
+			};
+			if (ent.classT == "pentagon"){
+				drawPenta(ent.x,ent.y,ent.angle,32,ent.color);
+			};
+		};
 	};
-	if (isMakingTank){
+	if (isMakingEntity){
 		ctx.globalAlpha = 0.6;
-		drawTank(makeTankX,makeTankY,makeTankAngle,levelToSize(makeTankLevel),makeTankColor,makeTankBarrels,makeTankBodyType,makeTankName,1);
+		if (makeEntityType == "tank"){
+			drawTank(makeEntityX,makeEntityY,makeEntityAngle,levelToSize(makeEntityLevel),makeEntityColor,makeEntityBarrels,makeEntityBodyType,makeEntityName,1);
+		};
+		if (makeEntityType == "shape"){
+			
+			if (makeEntityClass == "square"){
+				drawSquare(makeEntityX,makeEntityY,makeEntityAngle,16,makeEntityColor);
+			};
+			if (makeEntityClass == "pentagon"){
+				drawPenta(makeEntityX,makeEntityY,makeEntityAngle,32,makeEntityColor);
+			};
+		};
 		ctx.globalAlpha = 1;
 	};
 };
