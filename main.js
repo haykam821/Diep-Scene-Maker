@@ -264,10 +264,11 @@ var pentabarr = [
 	{barrelType: 0, length: 48, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
 ];
 var necrobarr = [
-	{barrelType: 1, length: 34, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 1, length: 34, width: 34, angle: 90, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 34, width: 34, angle: 270, offsetX: 0, damage: 1, penetration: 1}
 ];
 var factorybarr = [
-	{barrelType: 1, length: 27, width: 30, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 1, length: 34, width: 34, angle: 0, offsetX: 0, damage: 1, penetration: 1}
 ];
 
 
