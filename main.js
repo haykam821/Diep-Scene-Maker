@@ -42,12 +42,22 @@ return Math.pow(1.01055,level-1)*1.854*12;
 
 function step(){
 	if (isLoaded){
-		makeTankAngle = Math.atan2(mouseY - makeTankY, mouseX - makeTankX)*(180/Math.PI);
-		makeTankBarrels = getClassBarrels(classInput.value);
-		makeTankColor = colorInput.value;
-		makeTankBodyType = getClassBodyType(classInput.value);
-		makeTankLevel = levelInput.value;
-		makeTankName = nameInput.value;
+		makeEntityAngle = Math.atan2(mouseY - makeEntityY, mouseX - makeEntityX)*(180/Math.PI);
+		makeEntityBarrels = getClassBarrels(classInput.value);
+		makeEntityColor = colorInput.value;
+		makeEntityBodyType = getClassBodyType(classInput.value);
+		makeEntityLevel = levelInput.value;
+		makeEntityName = nameInput.value;
+		makeEntityType = entType.value;
+		makeEntityClass = classInput.value;
+	};
+	
+	
+	for(i=0;i<entity.length;i++){ //filter unwanted shapes out
+		var ent = entity[i];
+		if(ent.classT != "square" && ent.classT != "pentagon" && ent.entityType == "shape"){
+			entity.splice(i,1);
+		};
 	};
 };
 	
@@ -56,11 +66,11 @@ function step(){
 var mouseX, mouseY;
 var evt = window.event;
 
-var isMakingTank = false;
-var doMakeTank = false;
+var isMakingEntity = false;
+var doMakeEntity = false;
 var isLoaded = false;
-var makeTankX, makeTankY, makeTankAngle, makeTankColor, makeTankBarrels, makeTankLevel, makeTankBodyType, makeTankName;
-var levelInput, angleInput, colorInput, nameInput, classInput, btypeInput, sceneCodeText, barrelArray;
+var makeEntityX, makeEntityY, makeEntityAngle, makeEntityColor, makeEntityBarrels, makeEntityLevel, makeEntityBodyType, makeEntityName, makeEntityType;
+var levelInput, angleInput, colorInput, nameInput, classInput, btypeInput, sceneCodeText, barrelArray, entType;
 
 function handleOnLoad(){
 	isLoaded = true;
@@ -72,11 +82,12 @@ function handleOnLoad(){
 	btypeInput = document.getElementById("btypeInput");
 	sceneCodeText = document.getElementById("scenecodeText");
 	barrelArray = document.getElementById("barrelsInput");
+	entType = document.getElementById("etInput");
 };
 
 
 function handleClick(evt){
-		/*addTank(
+		/*addEntity(
 		mouseX,
 		mouseY,
 		angleInput.value,
@@ -86,29 +97,29 @@ function handleClick(evt){
 		levelInput.value,
 		getClassBarrels(classInput.value)
 		);*/
-		if (!isMakingTank){
-		makeTankX = mouseX+window.pageXOffset;
-		makeTankY = mouseY+window.pageYOffset;
+		if (!isMakingEntity){
+		makeEntityX = mouseX+window.pageXOffset;
+		makeEntityY = mouseY+window.pageYOffset;
 		};
 		
-		if (isMakingTank){
-			doMakeTank = true;
+		if (isMakingEntity){
+			doMakeEntity = true;
 		};
 		
 		
-		makeTank(
-		makeTankX,
-		makeTankY,
+		makeEntity(
+		makeEntityType,
+		makeEntityX,
+		makeEntityY,
 		colorInput.value,
 		1,
 		nameInput.value,
 		levelInput.value,
 		getClassBarrels(classInput.value),
-		makeTankBodyType
+		makeEntityBodyType,
+		makeEntityClass
 		);
 		
-		
-	console.log("click");
 };	
 
 function handleKeyDown(evt){
@@ -132,18 +143,18 @@ document.onmousemove = handleMouseMove;
 	
 setInterval(step,50);
 
-function makeTank(x,y,color,health,name,level,barrels,bodyType){
-	isMakingTank = true;
-	if (doMakeTank){
-		isMakingTank = false;
-		doMakeTank = false;
-		addTank(x,y,Math.atan2(mouseY - makeTankY, mouseX - makeTankX )*(180/Math.PI),color,health,name,level,barrels,bodyType);
+function makeEntity(type,x,y,color,health,name,level,barrels,bodyType,classT){
+	isMakingEntity = true;
+	if (doMakeEntity){
+		isMakingEntity = false;
+		doMakeEntity = false;
+		addEntity(type,x,y,Math.atan2(mouseY - makeEntityY, mouseX - makeEntityX )*(180/Math.PI),color,health,name,level,barrels,bodyType,classT);
 	};
 };
 
 
-function addTank(x,y,angle,color,health,name,level,barrels,bodyType){
-	entity.push({entityType:"tank",x:x,y:y,angle:angle,color:color,health:health,name:name,level:level,barrels:barrels,bodyType:bodyType});
+function addEntity(type,x,y,angle,color,health,name,level,barrels,bodyType,classT){
+	entity.push({entityType:type,x:x,y:y,angle:angle,color:color,health:health,name:name,level:level,barrels:barrels,bodyType:bodyType,classT:classT});
 	console.log("tank added");
 };
 
