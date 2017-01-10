@@ -64,6 +64,8 @@
 			<option value="booster">Booster</option>
 			<option value="necro">Necromancer</option>
 			<option value="factory">Factory</option>
+			<option value="square">Square</option>
+			<option value="pentagon">Pentagon</option>
 			<option value="custom">Custom</option>
 		</select>
 		<!--<input type="text" name="BodyType" id="btypeInput" value="circle" style='position:absolute; top:830px; left:100px;'></input>-->
@@ -77,12 +79,17 @@
 			<option value="spike">Spike</option>
 			<option value="dominator">Dominator</option>
 		</select>
+		<select id="etInput" style='position:absolute; top:850px; left:100px;'>
+			<option value="tank">Tank</option>
+			<option value="shape">Shape</option>
+		</select>
 		<textarea name="BarrelArray" id="barrelsInput" value="[]" style='position:absolute; top:850px; left:500px;'></textarea>
 		<p style='position:absolute; top:730px; left:10px;'>Level: </p>
 		<p style='position:absolute; top:750px; left:10px;'>Color: </p>
 		<p style='position:absolute; top:770px; left:10px;'>Name: </p>
 		<p style='position:absolute; top:790px; left:10px;'>Class: </p>
 		<p style='position:absolute; top:810px; left:10px;'>BodyType: </p>
+		<p style='position:absolute; top:830px; left:10px;'>Entity Type: </p>
 		<p style='position:absolute; top:810px; left:440px;'>Custom Barrel Array (optional): </p>
 		<button id="exportButton" onclick="exporttank()" style='position:absolute; top:730px; left:500px;'>Export to JSON</button>
 		<button id="importButton" onclick="importtank()" style='position:absolute; top:730px; left:620px;'>Import JSON</button>
