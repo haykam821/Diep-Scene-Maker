@@ -208,8 +208,8 @@ function drawTank(x,y,angle,radius,color,barrels,bodyType,name) {
 	};
 	if (bodyType == "square") { //square
 		
-		ctx.fillRect(-1*radius,-1*radius,radius*2,radius*2);
-		ctx.strokeRect(-1*radius,-1*radius,radius*2,radius*2);
+		ctx.fillRect(-24,-24,48,48);
+		ctx.strokeRect(-24,-24,48,48);
 	};
 	if (bodyType == "triangle") { //triangle
 		
