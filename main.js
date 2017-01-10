@@ -411,7 +411,7 @@ function getClassBodyType(className){
 		return "square";
 	};
 	if(
-	className == "guard"
+	className == "guardian"
 	){
 		return "triangle";
 	};
