@@ -367,10 +367,10 @@ function getClassBarrels(className){
 		return fighterbarr;
 		} else if (className == "necro"){
 		return necrobarr;
-		} else if (className == "summ"){
-		return summbarr;
-		} else if (className == "guard"){
-		return guardbarr;
+		} else if (className == "summoner"){
+		return summonerbarr;
+		} else if (className == "guardian"){
+		return guardianbarr;
 		} else if (className == "factory"){
 		return factorybarr;
 		} else if (className == "custom"){
