@@ -281,7 +281,13 @@ var necrobarr = [
 var factorybarr = [
 	{barrelType: 1, length: 34, width: 34, angle: 0, offsetX: 0, damage: 1, penetration: 1}
 ];
-
+var summonerbarr = [
+	{barrelType: 1, length: 34, width: 34, angle: 90, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 34, width: 34, angle: 180, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 34, width: 34, angle: 270, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 34, width: 34, angle: 360, offsetX: 0, damage: 1, penetration: 1}
+];
+var guardianbarr = [];
 
 
 
@@ -304,6 +310,10 @@ function getClassBarrels(className){
 		return [
 			{barrelType: 0, length: 34, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
 		];
+		} else if (className == "summoner"){
+		return summonerbarr;
+		} else if (className == "guardian"){
+		return guardianbarr;
 		} else if (className == "dom"){
 		return [
 			{barrelType: 3, length: 34, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
