@@ -287,7 +287,7 @@ var summonerbarr = [
 	{barrelType: 1, length: 34, width: 34, angle: 270, offsetX: 0, damage: 1, penetration: 1},
 	{barrelType: 1, length: 34, width: 34, angle: 360, offsetX: 0, damage: 1, penetration: 1}
 ];
-var guardianbarr = [];
+var guardianbarr = [{barrelType: 1, length: 25, width: 30, angle: 0, offsetX: 0, damage: 1, penetration: 1}];
 
 
 
