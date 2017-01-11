@@ -309,8 +309,8 @@ function drawSquare(x,y,angle,radius,color) {
 function drawPenta(pentaX,pentaY,pentaAng,pentaSize,pentaColor) {
 
 	ctx.save();
-	ctx.fillStyle = "#7777ff";
-	ctx.strokeStyle = pentaColor;
+	ctx.fillStyle = pentaColor;
+	ctx.strokeStyle = "#555555";
 	ctx.lineJoin = "round";
 	ctx.lineWidth = 4/(pentaSize);
 	ctx.beginPath();
