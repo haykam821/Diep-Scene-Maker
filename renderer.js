@@ -310,7 +310,7 @@ function drawPenta(pentaX,pentaY,pentaAng,pentaSize,pentaColor) {
 
 	ctx.save();
 	ctx.fillStyle = "#7777ff";
-	ctx.strokeStyle = "#555555";
+	ctx.strokeStyle = pentaColor;
 	ctx.lineJoin = "round";
 	ctx.lineWidth = 4/(pentaSize);
 	ctx.beginPath();
@@ -324,7 +324,6 @@ function drawPenta(pentaX,pentaY,pentaAng,pentaSize,pentaColor) {
 	}
 	ctx.fill()
 	ctx.stroke();
-	ctx.translate(-1*pentaX,-1*pentaY);
 	
 	ctx.closePath();
 	ctx.restore();
