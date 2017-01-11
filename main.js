@@ -59,10 +59,13 @@ function step(){
 			entity.splice(i,1);
 		};
 	};
+	
 	for(i=0;i<entity.length;i++){ //filter unwanted tanks out
 		var ent = entity[i];
-		if(ent.classT = "square" || ent.classT = "pentagon" && ent.entityType == "tank"){
-			entity.splice(i,1);
+		if(ent.classT == "square" || ent.classT == "pentagon"){
+			if(ent.entityType == "tank"){
+				entity.splice(i,1);
+			};
 		};
 	};
 };
