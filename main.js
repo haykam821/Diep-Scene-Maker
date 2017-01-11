@@ -145,7 +145,7 @@ function handleClick(evt){
 };	
 
 function handleKeyDown(evt){
-	if(evt.keyCode == 69){
+	if(evt.keyCode == 78){
 		deleteEntity(mouseX,mouseY,10);
 	};
 };	
