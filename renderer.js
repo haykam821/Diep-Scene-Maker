@@ -338,6 +338,7 @@ function drawPenta(pentaX,pentaY,pentaAng,pentaSize,pentaColor) {
 
 function drawGrid(x,y,width,height,slotSize,lineColor) {
 	ctx.save();
+	ctx.translate(x,y);
 	ctx.beginPath();
 	ctx.strokeColor = lineColor;
 	ctx.lineWidth = 1;
@@ -360,35 +361,35 @@ function renderStep(){
 	ctx.clearRect(0,0,canvas.width,canvas.height);
 	ctx.fillStyle = "#cdcdcd";
 	ctx.fillRect(0,0,canvas.width,canvas.height);
-	drawGrid(0,0,canvas.width,canvas.height,24,"#c0c0c0");
+	drawGrid(-1*camX % 24,-1*camY % 24,canvas.width,canvas.height,24,"#c0c0c0");
 	
 	
 	for(var i=0;i<entity.length;i++){
 		var ent = entity[i];
 		if (ent.entityType == "tank"){
-			drawTank(ent.x,ent.y,ent.angle,levelToSize(ent.level),ent.color,ent.barrels,ent.bodyType,ent.name,ent.health/100);
+			drawTank(ent.x-camX,ent.y-camY,ent.angle,levelToSize(ent.level),ent.color,ent.barrels,ent.bodyType,ent.name,ent.health/100);
 		};
 		if (ent.entityType == "shape"){ 
 			if (ent.classT == "square"){
-				drawSquare(ent.x,ent.y,ent.angle,16,ent.color);
+				drawSquare(ent.x-camX,ent.y-camY,ent.angle,16,ent.color);
 			};
 			if (ent.classT == "pentagon"){
-				drawPenta(ent.x,ent.y,ent.angle,32,ent.color);
+				drawPenta(ent.x-camX,ent.y-camY,ent.angle,32,ent.color);
 			};
 		};
 	};
 	if (isMakingEntity){
 		ctx.globalAlpha = 0.6;
 		if (makeEntityType == "tank"){
-			drawTank(makeEntityX,makeEntityY,makeEntityAngle,levelToSize(makeEntityLevel),makeEntityColor,makeEntityBarrels,makeEntityBodyType,makeEntityName,1);
+			drawTank(makeEntityX-camX,makeEntityY-camY,makeEntityAngle,levelToSize(makeEntityLevel),makeEntityColor,makeEntityBarrels,makeEntityBodyType,makeEntityName,1);
 		};
 		if (makeEntityType == "shape"){
 			
 			if (makeEntityClass == "square"){
-				drawSquare(makeEntityX,makeEntityY,makeEntityAngle,16,makeEntityColor);
+				drawSquare(makeEntityX-camX,makeEntityY-camY,makeEntityAngle,16,makeEntityColor);
 			};
 			if (makeEntityClass == "pentagon"){
-				drawPenta(makeEntityX,makeEntityY,makeEntityAngle,32,makeEntityColor);
+				drawPenta(makeEntityX-camX,makeEntityY-camY,makeEntityAngle,32,makeEntityColor);
 			};
 		};
 		ctx.globalAlpha = 1;
