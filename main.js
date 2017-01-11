@@ -37,6 +37,19 @@ return Math.pow(1.01055,level-1)*1.854*12;
 };
 
 
+function deleteEntity(x,y,r){
+	for(i=0;i<entity.length;i++){
+		var ent = entity[i];
+		if (getDistance(x,y,ent.x,ent.y) <= 10){
+			entity.splice(i,1);
+		};
+	};
+};
+
+
+function getDistance(ax,ay,bx,by){
+	return Math.sqrt(((bx-ax)*(bx-ax))+((by-ay)*(by-ay)));
+};
 
 
 
@@ -132,7 +145,9 @@ function handleClick(evt){
 };	
 
 function handleKeyDown(evt){
-	console.log("keypress");
+	if(evt.keyCode == 69){
+		deleteEntity(mouseX,mouseY,10);
+	};
 };	
 
 
