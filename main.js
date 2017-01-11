@@ -81,10 +81,32 @@ function step(){
 			};
 		};
 	};
+	
+	if(keysPressed[69]){
+		deleteEntity(mouseX,mouseY,10);
+	};
+	
+	if(keysPressed[40]){
+		camY += 5;
+	};
+	
+	if(keysPressed[38]){
+		camY -= 5;
+	};
+	
+	if(keysPressed[39]){
+		camX += 5;
+	};
+	
+	if(keysPressed[37]){
+		camX -= 5;
+	};
+	
+	
 };
 	
 
-	
+var camX = 0, camY = 0;
 var mouseX, mouseY;
 var evt = window.event;
 
@@ -143,11 +165,14 @@ function handleClick(evt){
 		);
 		
 };	
-
+var keysPressed = [];
 function handleKeyDown(evt){
-	if(evt.keyCode == 78){
-		deleteEntity(mouseX,mouseY,10);
-	};
+	keysPressed[evt.keyCode] = true;
+		
+	
+};	
+function handleKeyUp(evt){
+	keysPressed[evt.keyCode] = false;
 };	
 
 
@@ -157,12 +182,13 @@ function handleMouseMove(evt){
 	
 	
 	
-	mouseX = evt.clientX;
-	mouseY = evt.clientY;
+	mouseX = evt.clientX+camX;
+	mouseY = evt.clientY+camY;
 	
 };
 	
 document.onkeydown = handleKeyDown;
+document.onkeyup = handleKeyUp;
 document.onmousemove = handleMouseMove;
 	
 setInterval(step,50);
