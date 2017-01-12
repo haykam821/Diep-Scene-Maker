@@ -213,181 +213,193 @@ function addEntity(type,x,y,angle,color,health,name,level,barrels,bodyType,class
 
 
 var overtrapbarr = [
-    {barrelType: 2, length: 42, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-    {barrelType: 1, length: 34, width: 40, angle: 120, offsetX: 0, damage: 1, penetration: 1},
-    {barrelType: 1, length: 34, width: 40, angle: 240, offsetX: 0, damage: 1, penetration: 1}
+    {barrelType: 2, length: 42, width: 40, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+    {barrelType: 1, length: 34, width: 40, angle: 120, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+    {barrelType: 1, length: 34, width: 40, angle: 240, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var basicbarr = [
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var acbarr = [
-	{barrelType: 0, length: 34, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 34, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var flankbarr = [
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 34, width: 19, angle: 180, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 34, width: 19, angle: 180, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var sniperbarr = [
-	{barrelType: 0, length: 50, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 50, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var assassinbarr = [
-	{barrelType: 0, length: 58, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 58, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var hunterbarr = [
-	{barrelType: 0, length: 50, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 23, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 50, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 23, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var predatorbarr = [
-	{barrelType: 0, length: 50, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 44, width: 23, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 38, width: 27, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 50, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 44, width: 23, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 38, width: 27, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var overseerbarr = [
-	{barrelType: 1, length: 34, width: 40, angle: 90, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 1, length: 34, width: 40, angle: 270, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 1, length: 34, width: 40, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 34, width: 40, angle: 270, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var managerbarr = [
-	{barrelType: 1, length: 34, width: 34, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 1, length: 34, width: 34, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var overlordbarr = [
-	{barrelType: 1, length: 34, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 1, length: 34, width: 40, angle: 90, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 1, length: 34, width: 40, angle: 270, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 1, length: 34, width: 40, angle: 180, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 1, length: 34, width: 40, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 34, width: 40, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 34, width: 40, angle: 270, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 34, width: 40, angle: 180, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 
-var megatrapbarr = [{barrelType: 2, length: 42, width: 55, angle: 0, offsetX: 0, damage: 1, penetration: 1}];
+var megatrapbarr = [{barrelType: 2, length: 42, width: 55, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}];
 var trapbarr = [
-	{barrelType: 2, length: 42, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 2, length: 42, width: 40, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 	
 ];
 var atrapbarr = [
-	{barrelType: 2, length: 42, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 4, length: 25, width: 25, angle: 90, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 2, length: 42, width: 40, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 4, length: 25, width: 25, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 	
 ];
 	
 	
 var quadbarr = [
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 90, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 180, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 270, offsetX: 0, damage: 1, penetration: 1}];
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 180, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 270, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}];
 var octobarr = [
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 180, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 90, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 270, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 45, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 135, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 315, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 225, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 180, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 270, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 45, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 135, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 315, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 225, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var quadbarr = [
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 180, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 90, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 270, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 180, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 270, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var trianglebarr = [
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 38, width: 19, angle: 150, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 38, width: 19, angle: 210, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 38, width: 19, angle: 150, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 38, width: 19, angle: 210, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var fighterbarr = [
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 38, width: 19, angle: 150, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 38, width: 19, angle: 210, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 38, width: 19, angle: 90, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 38, width: 19, angle: 270, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 38, width: 19, angle: 150, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 38, width: 19, angle: 210, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 38, width: 19, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 38, width: 19, angle: 270, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var boosterbarr= [
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 34, width: 19, angle: 138, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 34, width: 19, angle: 222, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 38, width: 19, angle: 150, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 38, width: 19, angle: 210, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 34, width: 19, angle: 138, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 34, width: 19, angle: 222, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 38, width: 19, angle: 150, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 38, width: 19, angle: 210, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 	];
 var twinbarr = [
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: -24, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 24, damage: 1, penetration: 1}
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: -24, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 24, offsetY: 0, damage: 1, penetration: 1}
 ];
 var twinflankbarr = [
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: -24, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 24, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 180, offsetX: -24, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 180, offsetX: 24, damage: 1, penetration: 1}
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: -24, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 24, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 180, offsetX: -24, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 180, offsetX: 24, offsetY: 0, damage: 1, penetration: 1}
 ];
 var tripletwinbarr = [
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: -24, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 24, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 120, offsetX: -24, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 120, offsetX: 24, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 240, offsetX: -24, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 240, offsetX: 24, damage: 1, penetration: 1}
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: -24, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 24, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 120, offsetX: -24, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 120, offsetX: 24, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 240, offsetX: -24, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 240, offsetX: 24, offsetY: 0, damage: 1, penetration: 1}
 ];
 var tripletbarr = [
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: -24, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 24, damage: 1, penetration: 1},
-	{barrelType: 0, length: 46, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: -24, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 24, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 46, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var triplebarr = [
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 60, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 42, width: 19, angle: 300, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 60, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 300, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var pentabarr = [
-	{barrelType: 0, length: 34, width: 19, angle: 40, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 34, width: 19, angle: 320, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 34, width: 19, angle: 40, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 34, width: 19, angle: 320, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
 	
-	{barrelType: 0, length: 43, width: 19, angle: 20, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 43, width: 19, angle: 340, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 43, width: 19, angle: 20, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 43, width: 19, angle: 340, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
 	
-	{barrelType: 0, length: 48, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 48, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
 ];
 var necrobarr = [
-	{barrelType: 1, length: 34, width: 34, angle: 90, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 1, length: 34, width: 34, angle: 270, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 1, length: 34, width: 34, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 34, width: 34, angle: 270, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var factorybarr = [
-	{barrelType: 1, length: 34, width: 34, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 1, length: 34, width: 34, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var summonerbarr = [
-	{barrelType: 1, length: 30, width: 31, angle: 90, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 1, length: 30, width: 31, angle: 180, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 1, length: 30, width: 31, angle: 270, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 1, length: 30, width: 31, angle: 360, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 1, length: 30, width: 31, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 30, width: 31, angle: 180, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 30, width: 31, angle: 270, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 30, width: 31, angle: 360, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
-var guardianbarr = [{barrelType: 1, length: 25, width: 30, angle: 0, offsetX: 0, damage: 1, penetration: 1}];
+var guardianbarr = [{barrelType: 1, length: 25, width: 30, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}];
 var tritrapbarr = [
-    {barrelType: 2, length: 42, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-    {barrelType: 2, length: 42, width: 40, angle: 120, offsetX: 0, damage: 1, penetration: 1},
-    {barrelType: 2, length: 42, width: 40, angle: 240, offsetX: 0, damage: 1, penetration: 1}
+    {barrelType: 2, length: 42, width: 40, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+    {barrelType: 2, length: 42, width: 40, angle: 120, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+    {barrelType: 2, length: 42, width: 40, angle: 240, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var machinegunbarr = [
-	{barrelType: 1, length: 45, width: 34, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 1, length: 45, width: 34, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
-var destroyerbarr = [{barrelType: 0, length: 42, width: 55, angle: 0, offsetX: 0, damage: 1, penetration: 1}];
-var hybridbarr = [{barrelType: 0, length: 42, width: 55, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 1, length: 34, width: 40, angle: 180, offsetX: 0, damage: 1, penetration: 1}];
+var destroyerbarr = [{barrelType: 0, length: 42, width: 55, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}];
+var hybridbarr = [{barrelType: 0, length: 42, width: 55, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 34, width: 40, angle: 180, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}];
 var annibarr = [];
 var sprayerbarr = [
-	{barrelType: 0, length: 52, width: 18, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 1, length: 45, width: 34, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 52, width: 18, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 45, width: 34, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
-var asmasherbarr = [{barrelType: 4, length: 25, width: 25, angle: 90, offsetX: 0, damage: 1, penetration: 1}];
+var asmasherbarr = [{barrelType: 4, length: 25, width: 25, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}];
 var gunnerbarr = [
-    {barrelType: 0, length: 32, width: 12, angle: 0, offsetX: 30, damage: 1, penetration: 1},
-    {barrelType: 0, length: 32, width: 12, angle: 0, offsetX: -30, damage: 1, penetration: 1},
-    {barrelType: 0, length: 40, width: 12, angle: 0, offsetX: 16, damage: 1, penetration: 1},
-    {barrelType: 0, length: 40, width: 12, angle: 0, offsetX: -16, damage: 1, penetration: 1}
+    {barrelType: 0, length: 32, width: 12, angle: 0, offsetX: 30, offsetY: 0, damage: 1, penetration: 1},
+    {barrelType: 0, length: 32, width: 12, angle: 0, offsetX: -30, offsetY: 0, damage: 1, penetration: 1},
+    {barrelType: 0, length: 40, width: 12, angle: 0, offsetX: 16, offsetY: 0, damage: 1, penetration: 1},
+    {barrelType: 0, length: 40, width: 12, angle: 0, offsetX: -16, offsetY: 0, damage: 1, penetration: 1}
 ];
 var agunnerbarr = [
-    {barrelType: 0, length: 32, width: 12, angle: 0, offsetX: 30, damage: 1, penetration: 1},
-    {barrelType: 0, length: 32, width: 12, angle: 0, offsetX: -30, damage: 1, penetration: 1},
-    {barrelType: 0, length: 40, width: 12, angle: 0, offsetX: 16, damage: 1, penetration: 1},
-    {barrelType: 0, length: 40, width: 12, angle: 0, offsetX: -16, damage: 1, penetration: 1},
-    {barrelType: 4, length: 25, width: 25, angle: 90, offsetX: 0, damage: 1, penetration: 1}
+    {barrelType: 0, length: 32, width: 12, angle: 0, offsetX: 30, offsetY: 0, damage: 1, penetration: 1},
+    {barrelType: 0, length: 32, width: 12, angle: 0, offsetX: -30, offsetY: 0, damage: 1, penetration: 1},
+    {barrelType: 0, length: 40, width: 12, angle: 0, offsetX: 16, offsetY: 0, damage: 1, penetration: 1},
+    {barrelType: 0, length: 40, width: 12, angle: 0, offsetX: -16, offsetY: 0, damage: 1, penetration: 1},
+    {barrelType: 4, length: 25, width: 25, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
+];
+var auto5barr = [
+	{barrelType: 5, length: 25, width: 25, angle: 0, offsetX: 0, offsetY: 42, damage: 1, penetration: 1},
+	{barrelType: 5, length: 25, width: 25, angle: 72, offsetX: 0, offsetY: 42, damage: 1, penetration: 1},
+	{barrelType: 5, length: 25, width: 25, angle: 144, offsetX: 0, offsetY: 42, damage: 1, penetration: 1},
+	{barrelType: 5, length: 25, width: 25, angle: 216, offsetX: 0, offsetY: 42, damage: 1, penetration: 1},
+	{barrelType: 5, length: 25, width: 25, angle: 288, offsetX: 0, offsetY: 42, damage: 1, penetration: 1}
+];
+var auto3barr = [
+	{barrelType: 5, length: 25, width: 25, angle: 0, offsetX: 0, offsetY: 42, damage: 1, penetration: 1},
+	{barrelType: 5, length: 25, width: 25, angle: 120, offsetX: 0, offsetY: 42, damage: 1, penetration: 1},
+	{barrelType: 5, length: 25, width: 25, angle: 240, offsetX: 0, offsetY: 42, damage: 1, penetration: 1}
 ];
 
 
@@ -420,6 +432,10 @@ function getClassBarrels(className){
 		return tritrapbarr;
 	} else if (className == 'fg'){
 		return flankbarr;
+	} else if (className == 'auto5'){
+		return auto5barr;
+	} else if (className == 'auto3'){
+		return auto3barr;
 	} else if (className == 'spike' || className == 'landmine' || className == 'smasher'){
 		return [];
 		} else if (className == "flank"){
