@@ -260,7 +260,7 @@ function drawTank(x,y,angle,radius,color,barrels,bodyType,name) {
 	for (i = 0; i < barrels.length; i++) { //basic rectangle
 		if (barrels[i].barrelType == 4) { //auto turret
 			ctx.save();
-			ctx.rotate(degToRad(barrels[i].angle+time));
+			ctx.rotate(degToRad(new Date().getTime()/12%360));
 			ctx.fillStyle = "#999999";
 			ctx.beginPath();
 			ctx.fillRect(0,(48-(barrels[i].width/2))-48,barrels[i].length*2,(barrels[i].width/2)*2);
