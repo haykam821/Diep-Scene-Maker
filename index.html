@@ -23,14 +23,10 @@
 			}
 			window.onload = function(){
 				document.getElementById('canvas').width = window.innerWidth;
-				document.getElementById('colors').onchange = function(){
-					document.getElementById('colorInput').value = document.getElementById('colors').value;
-				}
 			}
 		</script>
 	
-		<input type="color" name="Color" id="colorInput" value="#00B2E1" style='position:absolute; top:770px; left:100px;'></input>
-
+		<input type="color" name="Color" id="colorInput"  value="#00B2E1" style='position:absolute; top:770px; left:100px;'></input>	
 	<select id='colors' style='position:absolute; top:770px; left:165px;'><optgroup label='Teams'>
 			<option value='#00B2E1'>Blue</option>
 			<option value='#F14E54'>Red</option>
@@ -51,9 +47,14 @@
 			<option value='#999999'>Barrel Gray</option>
 </optgroup>
 		</select>
-		<input type="text" name="Name" id="nameInput" value="Tank" style='position:absolute; top:830px; left:100px;'></input>
+		<script>
+				document.getElementById('colors').onchange = function(){
+					setColorInput(document.getElementById('colors').value);
+				}
+		</script>
+		<input type="text" name="Name" id="nameInput" value="Tank" style='position:absolute; top:790px; left:100px;'></input>
 		<!--<input type="text" name="Class" id="classInput" value="basic" style='position:absolute; top:810px; left:100px;'></input>-->
-		<select id="classInput" style='position:absolute; top:850px; left:100px;'>
+		<select id="classInput" style='position:absolute; top:810px; left:100px;'>
 			
 			<optgroup label='Tanks'>
 			<option value="factory">Factory</option>
@@ -132,7 +133,7 @@
 		<p style='position:absolute; top:830px; left:10px;'>Class: </p>
 		<p style='position:absolute; top:850px; left:10px;'>BodyType: </p>
 		<p style='position:absolute; top:870px; left:10px;'>Entity Type: </p>
-		<p style='position:absolute; top:810px; left:440px;'>Custom Barrel Array (optional): </p>
+		<p style='position:absolute; top:850px; left:440px;'>Custom Barrel Array (optional): </p>
 		<button id="exportButton" onclick="exporttank()" style='position:absolute; top:730px; left:500px;'>Export to JSON</button>
 		<button id="importButton" onclick="importtank()" style='position:absolute; top:730px; left:620px;'>Import JSON</button>
 		<textarea id="scenecodeText" style='position:absolute; top:760px; left:500px;'></textarea>

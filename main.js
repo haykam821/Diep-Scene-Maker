@@ -6,14 +6,6 @@ function setColorInput(color){
 	colorInput.value = color;
 };
 
-function setColorInput2(color){
-	colorInput2.value = color;
-};
-
-function setColorInput3(color){
-	colorInput3.value = color;
-};
-
 
 
 function exporttank(){
