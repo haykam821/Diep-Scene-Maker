@@ -247,7 +247,7 @@ var overseerbarr = [
 	{barrelType: 1, length: 34, width: 40, angle: 270, offsetX: 0, damage: 1, penetration: 1}
 ];
 var managerbarr = [
-	{barrelType: 1, length: 34, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 1, length: 34, width: 34, angle: 0, offsetX: 0, damage: 1, penetration: 1}
 ];
 var overlordbarr = [
 	{barrelType: 1, length: 34, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1},
@@ -258,7 +258,16 @@ var overlordbarr = [
 
 var megatrapbarr = [{barrelType: 2, length: 42, width: 55, angle: 0, offsetX: 0, damage: 1, penetration: 1}];
 var trapbarr = [
-	{barrelType: 2, length: 42, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1}];
+	{barrelType: 2, length: 42, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	
+];
+var atrapbarr = [
+	{barrelType: 2, length: 42, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 4, length: 25, width: 25, angle: 90, offsetX: 0, damage: 1, penetration: 1}
+	
+];
+	
+	
 var quadbarr = [
 	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
 	{barrelType: 0, length: 42, width: 19, angle: 90, offsetX: 0, damage: 1, penetration: 1},
@@ -355,13 +364,31 @@ var tritrapbarr = [
     {barrelType: 2, length: 42, width: 40, angle: 120, offsetX: 0, damage: 1, penetration: 1},
     {barrelType: 2, length: 42, width: 40, angle: 240, offsetX: 0, damage: 1, penetration: 1}
 ];
-var machinegunbarr = [];
+var machinegunbarr = [
+	{barrelType: 1, length: 45, width: 34, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+];
 var destroyerbarr = [{barrelType: 0, length: 42, width: 55, angle: 0, offsetX: 0, damage: 1, penetration: 1}];
 var hybridbarr = [{barrelType: 0, length: 42, width: 55, angle: 0, offsetX: 0, damage: 1, penetration: 1},
 	{barrelType: 1, length: 34, width: 40, angle: 180, offsetX: 0, damage: 1, penetration: 1}];
 var annibarr = [];
-var sprayerbarr = [];
+var sprayerbarr = [
+	{barrelType: 0, length: 52, width: 18, angle: 0, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 45, width: 34, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+];
 var asmasherbarr = [{barrelType: 4, length: 25, width: 25, angle: 90, offsetX: 0, damage: 1, penetration: 1}];
+var gunnerbarr = [
+    {barrelType: 0, length: 32, width: 12, angle: 0, offsetX: 30, damage: 1, penetration: 1},
+    {barrelType: 0, length: 32, width: 12, angle: 0, offsetX: -30, damage: 1, penetration: 1},
+    {barrelType: 0, length: 40, width: 12, angle: 0, offsetX: 16, damage: 1, penetration: 1},
+    {barrelType: 0, length: 40, width: 12, angle: 0, offsetX: -16, damage: 1, penetration: 1}
+];
+var agunnerbarr = [
+    {barrelType: 0, length: 32, width: 12, angle: 0, offsetX: 30, damage: 1, penetration: 1},
+    {barrelType: 0, length: 32, width: 12, angle: 0, offsetX: -30, damage: 1, penetration: 1},
+    {barrelType: 0, length: 40, width: 12, angle: 0, offsetX: 16, damage: 1, penetration: 1},
+    {barrelType: 0, length: 40, width: 12, angle: 0, offsetX: -16, damage: 1, penetration: 1},
+    {barrelType: 4, length: 25, width: 25, angle: 90, offsetX: 0, damage: 1, penetration: 1}
+];
 
 
 
@@ -381,7 +408,11 @@ function getClassBarrels(className){
 		return annibarr;
 	} else if (className == 'sprayer'){
 		return sprayerbarr;
-	} else if (className == 'ovt'){
+	} else if (className == 'gunner'){
+		return gunnerbarr;
+	} else if (className == 'agunner'){
+		return agunnerbarr;
+	}  else if (className == 'ovt'){
 		return overtrapbarr;
 	} else if (className == 'ts'){
 		return triplebarr;
@@ -439,6 +470,8 @@ function getClassBarrels(className){
 		return predatorbarr;
 		} else if (className == "trapper"){
 		return trapbarr;
+		} else if (className == "atrapper"){
+		return atrapbarr;
 		} else if (className == "megatrapper"){
 		return megatrapbarr;
 		} else if (className == "overlord"){
