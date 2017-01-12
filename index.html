@@ -43,8 +43,10 @@
 </optgroup>
 		</select>
 		<script>
-			document.getElementById('colors').onchange = function(){
-				setColorInput(document.getElementById('colors').value);
+			window.onresize = function(){
+				document.getElementById('colors').onchange = function(){
+					setColorInput(document.getElementById('colors').value);
+				}
 			}
 		</script>
 		<input type="text" name="Name" id="nameInput" value="Tank" style='position:absolute; top:790px; left:100px;'></input>
