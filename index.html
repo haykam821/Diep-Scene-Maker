@@ -90,7 +90,7 @@
 		</select>
 		<script>
 				document.getElementById('colors').onchange = function(){
-					setColorInput(document.getElementById('colors').value);
+					document.getElementById('colorInput').value = document.getElementById('colors').value;
 				}
 				document.getElementById('colors2').onchange = function(){
 					document.getElementById('color2').value = document.getElementById('colors2').value;
