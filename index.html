@@ -21,9 +21,7 @@
 			window.onresize = function(){
 				document.getElementById('canvas').width = window.innerWidth;
 			}
-			window.onload = function(){
-				document.getElementById('canvas').width = window.innerWidth;
-			}
+			
 		</script>
 	
 		<input type="color" name="Color" id="colorInput"  value="#00B2E1" style='position:absolute; top:770px; left:100px;'></input>	
@@ -52,9 +50,9 @@
 					setColorInput(document.getElementById('colors').value);
 				}
 		</script>
-		<input type="text" name="Name" id="nameInput" value="Tank" style='position:absolute; top:790px; left:100px;'></input>
+		<input type="text" name="Name" id="nameInput" value="Tank" style='position:absolute; top:830px; left:100px;'></input>
 		<!--<input type="text" name="Class" id="classInput" value="basic" style='position:absolute; top:810px; left:100px;'></input>-->
-		<select id="classInput" style='position:absolute; top:810px; left:100px;'>
+		<select id="classInput" style='position:absolute; top:850px; left:100px;'>
 			
 			<optgroup label='Tanks'>
 			<option value="factory">Factory</option>
@@ -120,7 +118,7 @@
 			<option value="spike">Spike</option>
 			<option value="dominator">Dominator</option>
 		</select>
-		<select id="etInput" style='position:absolute; top:870px; left:100px;'>
+		<select id="etInput" style='position:absolute; top:890px; left:100px;'>
 			<option value="tank">Tank</option>
 			<option value="shape">Shape</option>
 		</select>
