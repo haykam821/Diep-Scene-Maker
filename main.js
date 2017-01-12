@@ -143,8 +143,8 @@ function handleClick(evt){
 		getClassBarrels(classInput.value)
 		);*/
 		if (!isMakingEntity){
-		makeEntityX = mouseX+window.pageXOffset;
-		makeEntityY = mouseY+window.pageYOffset;
+		makeEntityX = mouseX+window.pageXOffset+camX;
+		makeEntityY = mouseY+window.pageYOffset+camY;
 		};
 		
 		if (isMakingEntity){
