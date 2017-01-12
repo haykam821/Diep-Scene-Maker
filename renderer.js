@@ -136,8 +136,8 @@ function drawTank(x,y,angle,radius,color,barrels,bodyType,name) {
 		if (barrels[i].barrelType == 0) {
 			ctx.save();
 			ctx.rotate(degToRad(barrels[i].angle));
-			ctx.fillRect(0,(48-barrels[i].width)-48+barrels[i].offsetX,barrels[i].length*2,barrels[i].width*2);
-			ctx.strokeRect(0,(48-barrels[i].width)-48+barrels[i].offsetX,barrels[i].length*2,barrels[i].width*2);
+			ctx.fillRect(barrels[i].offsetY,(48-barrels[i].width)-48+barrels[i].offsetX,barrels[i].length*2,barrels[i].width*2);
+			ctx.strokeRect(barrels[i].offsetY,(48-barrels[i].width)-48+barrels[i].offsetX,barrels[i].length*2,barrels[i].width*2);
 			ctx.restore();
 		};
 		
@@ -146,10 +146,10 @@ function drawTank(x,y,angle,radius,color,barrels,bodyType,name) {
 			ctx.rotate(degToRad(barrels[i].angle));
 			ctx.beginPath();
 			ctx.moveTo(0,((-1*barrels[i].width)/2)+barrels[i].offsetX);
-			ctx.lineTo(barrels[i].length*2,((-1*barrels[i].width*2)/2)+barrels[i].offsetX);
-			ctx.lineTo(barrels[i].length*2,((barrels[i].width*2)/2)+barrels[i].offsetX);
-			ctx.lineTo(0,((barrels[i].width)/2)+barrels[i].offsetX);
-			ctx.lineTo(0,((-1*barrels[i].width)/2)+barrels[i].offsetX);
+			ctx.lineTo(barrels[i].offsetY+(barrels[i].length*2),((-1*barrels[i].width*2)/2)+barrels[i].offsetX);
+			ctx.lineTo(barrels[i].offsetY+(barrels[i].length*2),((barrels[i].width*2)/2)+barrels[i].offsetX);
+			ctx.lineTo(barrels[i].offsetY,((barrels[i].width)/2)+barrels[i].offsetX);
+			ctx.lineTo(barrels[i].offsetY,((-1*barrels[i].width)/2)+barrels[i].offsetX);
 			ctx.fill();
 			ctx.stroke();
 			ctx.closePath();
@@ -161,11 +161,11 @@ function drawTank(x,y,angle,radius,color,barrels,bodyType,name) {
 			ctx.fillRect(0,(48-barrels[i].width/2)-48+barrels[i].offsetX,barrels[i].length*2,barrels[i].width);
 			ctx.strokeRect(0,(48-barrels[i].width/2)-48+barrels[i].offsetX,barrels[i].length*2,barrels[i].width);
 			ctx.beginPath();
-			ctx.moveTo(barrels[i].length*1.6,((-1*barrels[i].width)/2)+barrels[i].offsetX);
-			ctx.lineTo(barrels[i].length*2,((-1*barrels[i].width*2)/2)+barrels[i].offsetX);
-			ctx.lineTo(barrels[i].length*2,((barrels[i].width*2)/2)+barrels[i].offsetX);
-			ctx.lineTo(barrels[i].length*1.6,((barrels[i].width)/2)+barrels[i].offsetX);
-			ctx.lineTo(barrels[i].length*1.6,((-1*barrels[i].width)/2)+barrels[i].offsetX);
+			ctx.moveTo(barrels[i].offsetY+(barrels[i].length*1.6),((-1*barrels[i].width)/2)+barrels[i].offsetX);
+			ctx.lineTo(barrels[i].offsetY+(barrels[i].length*2),((-1*barrels[i].width*2)/2)+barrels[i].offsetX);
+			ctx.lineTo(barrels[i].offsetY+(barrels[i].length*2),((barrels[i].width*2)/2)+barrels[i].offsetX);
+			ctx.lineTo(barrels[i].offsetY+(barrels[i].length*1.6),((barrels[i].width)/2)+barrels[i].offsetX);
+			ctx.lineTo(barrels[i].offsetY+(barrels[i].length*1.6),((-1*barrels[i].width)/2)+barrels[i].offsetX);
 			ctx.fill();
 			ctx.stroke();
 			ctx.closePath();
@@ -175,15 +175,28 @@ function drawTank(x,y,angle,radius,color,barrels,bodyType,name) {
 			ctx.save();
 			ctx.rotate(degToRad(barrels[i].angle));
 			ctx.beginPath();
-			ctx.moveTo(0,((-1*barrels[i].width)/2)+barrels[i].offsetX);
-			ctx.lineTo(0,((-1*barrels[i].width*2)/1)+barrels[i].offsetX);
-			ctx.lineTo(0,((-1*barrels[i].width*2)/1)+barrels[i].offsetX);
-			ctx.lineTo(0,(barrels[i].width*2)+barrels[i].offsetX);
-			ctx.lineTo(barrels[i].length*1.8,((barrels[i].width))+barrels[i].offsetX);
-			ctx.lineTo(barrels[i].length*1.8,((-1*barrels[i].width))+barrels[i].offsetX);
-			ctx.lineTo(0,((-1*barrels[i].width*2))+barrels[i].offsetX);
+			ctx.moveTo(barrels[i].offsetY,((-1*barrels[i].width)/2)+barrels[i].offsetX);
+			ctx.lineTo(barrels[i].offsetY,((-1*barrels[i].width*2)/1)+barrels[i].offsetX);
+			ctx.lineTo(barrels[i].offsetY,((-1*barrels[i].width*2)/1)+barrels[i].offsetX);
+			ctx.lineTo(barrels[i].offsetY,(barrels[i].width*2)+barrels[i].offsetX);
+			ctx.lineTo(barrels[i].offsetY+(barrels[i].length*1.8),((barrels[i].width))+barrels[i].offsetX);
+			ctx.lineTo(barrels[i].offsetY+(barrels[i].length*1.8),((-1*barrels[i].width))+barrels[i].offsetX);
+			ctx.lineTo(barrels[i].offsetY,((-1*barrels[i].width*2))+barrels[i].offsetX);
 			ctx.fillRect(barrels[i].length*1.8,(48-barrels[i].width)-48+barrels[i].offsetX,barrels[i].length*0.5,barrels[i].width*2);
 			ctx.strokeRect(barrels[i].length*1.8,(48-barrels[i].width)-48+barrels[i].offsetX,barrels[i].length*0.5,barrels[i].width*2);
+			ctx.fill();
+			ctx.stroke();
+			ctx.closePath();
+			ctx.restore();
+		};
+		if (barrels[i].barrelType == 5) { //under auto turret
+			ctx.save();
+			ctx.rotate(degToRad(new Date().getTime()/12%360)+degToRad(barrels[i].angle));
+			ctx.fillStyle = "#999999";
+			ctx.beginPath();
+			ctx.fillRect(barrels[i].offsetY,(48-(barrels[i].width/2))-48,barrels[i].length*2,(barrels[i].width/2)*2);
+			ctx.strokeRect(barrels[i].offsetY,(48-(barrels[i].width/2))-48,barrels[i].length*2,(barrels[i].width/2)*2);
+			ctx.arc(barrels[i].offsetY,barrels[i].offsetX,barrels[i].width,0,2*Math.PI);
 			ctx.fill();
 			ctx.stroke();
 			ctx.closePath();
@@ -260,12 +273,12 @@ function drawTank(x,y,angle,radius,color,barrels,bodyType,name) {
 	for (i = 0; i < barrels.length; i++) { //basic rectangle
 		if (barrels[i].barrelType == 4) { //auto turret
 			ctx.save();
-			ctx.rotate(degToRad(new Date().getTime()/12%360));
+			ctx.rotate(degToRad(new Date().getTime()/12%360)+degToRad(barrels[i].angle));
 			ctx.fillStyle = "#999999";
 			ctx.beginPath();
-			ctx.fillRect(0,(48-(barrels[i].width/2))-48,barrels[i].length*2,(barrels[i].width/2)*2);
-			ctx.strokeRect(0,(48-(barrels[i].width/2))-48,barrels[i].length*2,(barrels[i].width/2)*2);
-			ctx.arc(0,barrels[i].offsetX,barrels[i].width,0,2*Math.PI);
+			ctx.fillRect(barrels[i].offsetY,(48-(barrels[i].width/2))-48,barrels[i].length*2,(barrels[i].width/2)*2);
+			ctx.strokeRect(barrels[i].offsetY,(48-(barrels[i].width/2))-48,barrels[i].length*2,(barrels[i].width/2)*2);
+			ctx.arc(barrels[i].offsetY,barrels[i].offsetX,barrels[i].width,0,2*Math.PI);
 			ctx.fill();
 			ctx.stroke();
 			ctx.closePath();
