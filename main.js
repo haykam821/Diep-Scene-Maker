@@ -434,60 +434,23 @@ function getClassBarrels(className){
 };
 
 function getClassBodyType(className){
-	if(
-	className == "basic" || 
-	className == "ac" || 
-	className == "sniper" || 
-	className == "assassin" || 
-	className == "hunter" || 
-	className == "predator" || 
-	className == "trapper" || 
-	className == "megatrapper" || 
-	className == "overlord" || 
-	className == "manager" || 
-	className == "twin" || 
-	className == "tripletwin" || 
-	className == "twinflank" || 
-	className == "triplet" || 
-	className == "triangle" || 
-	className == "booster" ||
-	className == "penta" ||
-	className == "octo"
-	){
-		return "circle";
-	};
-	if(
-	className == "necro" || 
-	className == "factory" ||
-	className == "summoner"
-	){
+	if (className == "necro" || className == "factory" || className == "summoner") {
 		return "square";
-	};
-	if(
-	className == "guardian"
-	){
+	} else if (className == "guardian") {
 		return "triangle";
-	};
-	if(
-	className == "dom"
-	){
+	} else if (className == "dom") {
 		return "dominator";
-	};
-	if(
-	className == "ms"
-	){
+	} else if (className == "ms") {
 		return "mothership";
-	};
-	if(className == 'spike'){
+	} else if (className == 'spike') {
 		return 'spike';
-	};
-	if(className == 'smasher'||className=='asmasher'){
+	} else if (className == 'smasher' || className == 'asmasher') {
 		return 'smasher';
-	};
-	if(className == 'landmine'){
+	} else if (className == 'landmine') {
 		return 'landmine';
-	};
-	if(className == "custom"){
-		return btypeInput.value;
+	} else if (className == "custom") {
+	    return btypeInput.value;
+	} else {
+		return 'circle';
 	};
 };
