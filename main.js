@@ -472,11 +472,11 @@ function getClassBarrels(className){
 			return quadbarr;
 		} else if (className == "ac"){
 		return [
-			{barrelType: 0, length: 34, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+			{barrelType: 0, length: 34, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 		];
 		} else if (className == "dom"){
 		return [
-			{barrelType: 3, length: 34, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+			{barrelType: 3, length: 34, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 		];
 		} else if (className == "ms"){
 		return [
