@@ -120,7 +120,7 @@
 			<option value="spike">Spike</option>
 			<option value="dominator">Dominator</option>
 		</select>
-		<select id="etInput" style='position:absolute; top:890px; left:100px;'>
+		<select id="etInput" style='position:absolute; top:870px; left:100px;'>
 			<option value="tank">Tank</option>
 			<option value="shape">Shape</option>
 		</select>
@@ -134,9 +134,13 @@
 		<p style='position:absolute; top:850px; left:10px;'>BodyType: </p>
 		<p style='position:absolute; top:870px; left:10px;'>Entity Type: </p>
 		<p style='position:absolute; top:850px; left:440px;'>Custom Barrel Array (optional): </p>
+		<p style='position:absolute; top:870px; left:440px;'>Canvas Width: </p>
+		<p style='position:absolute; top:890px; left:440px;'>Canvas Height: </p>
 		<button id="exportButton" onclick="exporttank()" style='position:absolute; top:730px; left:500px;'>Export to JSON</button>
 		<button id="importButton" onclick="importtank()" style='position:absolute; top:730px; left:620px;'>Import JSON</button>
 		<textarea id="scenecodeText" style='position:absolute; top:760px; left:500px;'></textarea>
+                <input type='number' style='position:absolute; top:830px; left:500px;'>
+                <input type='number' style='position:absolute; top:850px; left:500px;'>
 		<script src='renderer.js'></script>
 	</div>
 
