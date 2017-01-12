@@ -399,6 +399,8 @@ function getClassBarrels(className){
 		return megatrapbarr;
 		} else if (className == "overlord"){
 		return overlordbarr;
+		} else if (className == 'overseer'){
+		return overseerbarr;
 		} else if (className == "manager"){
 		return managerbarr;
 		} else if (className == "twin"){
