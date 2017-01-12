@@ -401,7 +401,26 @@ var auto3barr = [
 	{barrelType: 5, length: 25, width: 25, angle: 120, offsetX: 0, offsetY: 42, damage: 1, penetration: 1},
 	{barrelType: 5, length: 25, width: 25, angle: 240, offsetX: 0, offsetY: 42, damage: 1, penetration: 1}
 ];
-
+var streambarr = [
+	{barrelType: 0, length: 54, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 49, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 44, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 39, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 34, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+];
+var spreadbarr = [
+	{barrelType: 0, length: 30, width: 12, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 30, width: 12, angle: -90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 34, width: 12, angle: 72, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 34, width: 12, angle: -72, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 38, width: 12, angle: 54, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 38, width: 12, angle: -54, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 12, angle: 36, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 12, angle: -36, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 46, width: 12, angle: 18, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 46, width: 12, angle: -18, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 50, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
+];
 
 
 
@@ -424,6 +443,8 @@ function getClassBarrels(className){
 		return gunnerbarr;
 	} else if (className == 'agunner'){
 		return agunnerbarr;
+	} else if (className == 'stream'){
+		return streambarr;
 	}  else if (className == 'ovt'){
 		return overtrapbarr;
 	} else if (className == 'ts'){
@@ -498,6 +519,8 @@ function getClassBarrels(className){
 		return managerbarr;
 		} else if (className == "twin"){
 		return twinbarr;
+		} else if (className == "spread"){
+		return spreadbarr;
 		} else if (className == "tripletwin"){
 		return tripletwinbarr;
 		} else if (className == "twinflank"){
