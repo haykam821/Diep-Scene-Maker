@@ -349,6 +349,8 @@ function getClassBarrels(className){
 		return [
 			{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
 		];
+	} else if (className == 'spike' || className == 'landmine' || className == 'smasher'){
+		return [];
 		} else if (className == "flank"){
 		return [
 			{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
