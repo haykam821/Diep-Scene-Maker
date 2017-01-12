@@ -18,21 +18,25 @@
 		<input type="text" name="Level" id="levelInput" value="1" style='position:absolute; top:750px; left:100px;'></input>
 	
 		<input type="color" name="Color" id="colorInput"  value="#00B2E1" style='position:absolute; top:770px; left:100px;'></input>	
-	<select id='colors' style='position:absolute; top:770px; left:165px;'>
+	<select id='colors' style='position:absolute; top:770px; left:165px;'><optgroup label='Teams'>
 			<option value='#00B2E1'>Blue</option>
 			<option value='#F14E54'>Red</option>
 			<option value='#00E16E'>Green</option>
 			<option value='#BF7FF5'>Purple</option>
+		</optgroup><optgroup label='Unplayable Teams'>
 			<option value='#D48067'>Brown</option>
 			<option value='#FFE869'>Yellow</option>
 			<option value='#C0C0C0'>Fallen Gray</option>
+</optgroup><optgroup label='Other Colors'>
 			<option value='#EF7BDB'>Crasher Magenta</option>
 			<option value='#7790F9'>Pentagon Blue</option>
 			<option value='#FAC27C'>Necromancer Square Orange</option>
 			<option value='#FA777A'>Triangle/Defender Red</option>
 			<option value='#8DFD71'>Green Shape Green</option>
+</optgroup><optgroup label='Tank Colors'>
 			<option value='#555555'>Outline Gray</option>
 			<option value='#999999'>Barrel Gray</option>
+</optgroup>
 		</select>
 		<script>
 			document.getElementById('colors').onchange = function(){
