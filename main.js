@@ -127,6 +127,7 @@ function handleOnLoad(){
 	sceneCodeText = document.getElementById("scenecodeText");
 	barrelArray = document.getElementById("barrelsInput");
 	entType = document.getElementById("etInput");
+	document.getElementById('canvas').width = window.innerWidth;
 };
 
 
@@ -182,8 +183,8 @@ function handleMouseMove(evt){
 	
 	
 	
-	mouseX = evt.clientX+camX;
-	mouseY = evt.clientY+camY;
+	mouseX = evt.clientX+window.pageXOffset+camX;
+	mouseY = evt.clientY+window.pageYOffset+camY;
 	
 };
 	
