@@ -269,6 +269,12 @@ var octobarr = [
 	{barrelType: 0, length: 42, width: 19, angle: 315, offsetX: 0, damage: 1, penetration: 1},
 	{barrelType: 0, length: 42, width: 19, angle: 225, offsetX: 0, damage: 1, penetration: 1}
 ];
+var quadbarr = [
+	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 180, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 90, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 42, width: 19, angle: 270, offsetX: 0, damage: 1, penetration: 1}
+];
 var trianglebarr = [
 	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
 	{barrelType: 0, length: 38, width: 19, angle: 150, offsetX: 0, damage: 1, penetration: 1},
@@ -359,6 +365,8 @@ function getClassBarrels(className){
 		];
 		} else if (className == "octo"){
 		return octobarr;
+		} else if (className == 'quad'){
+			return quadbarr;
 		} else if (className == "ac"){
 		return [
 			{barrelType: 0, length: 34, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
