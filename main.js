@@ -478,6 +478,15 @@ function getClassBodyType(className){
 	){
 		return "mothership";
 	};
+	if(className == 'spike'){
+		return 'spike';
+	};
+	if(className == 'smasher'||className=='asmasher'){
+		return 'smasher';
+	};
+	if(className == 'landmine'){
+		return 'landmine';
+	};
 	if(className == "custom"){
 		return btypeInput.value;
 	};
