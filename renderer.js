@@ -32,9 +32,9 @@ function drawTank(x,y,angle,radius,color,barrels,bodyType,name) {
 		ctx.strokeStyle = "#555555";
 		ctx.lineJoin = "round";
 		var hA = ((Math.PI * 2)/6);
-		ctx.moveTo(Math.cos((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*58,Math.sin((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*58);
+		ctx.moveTo(Math.cos((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*55,Math.sin((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*55);
 		for (var hI = 1; hI < 8; hI++) {
-			ctx.lineTo(Math.cos((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*58,Math.sin((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*58);
+			ctx.lineTo(Math.cos((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*55,Math.sin((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*55);
 		};
 		ctx.fill();
 		ctx.stroke();
@@ -54,15 +54,15 @@ function drawTank(x,y,angle,radius,color,barrels,bodyType,name) {
 		ctx.strokeStyle = "#555555";
 		ctx.lineJoin = "round";
 		var hA = ((Math.PI * 2)/6);
-		ctx.moveTo(Math.cos((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*58,Math.sin((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*58);
+		ctx.moveTo(Math.cos((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*55,Math.sin((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*55);
 		for (var hI = 1; hI < 8; hI++) {
-			ctx.lineTo(Math.cos((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*58,Math.sin((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*58);
+			ctx.lineTo(Math.cos((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*55,Math.sin((hA*hI) - degToRad(angle) + degToRad((time/6)%360) )*55);
 		};
 		ctx.fill();
 		ctx.stroke();
-		ctx.moveTo(Math.cos((hA*hI) - degToRad(angle) + degToRad((time/12)%360) )*58,Math.sin((hA*hI) - degToRad(angle) + degToRad((time/12)%360) )*58);
+		ctx.moveTo(Math.cos((hA*hI) - degToRad(angle) + degToRad((time/12)%360) )*55,Math.sin((hA*hI) - degToRad(angle) + degToRad((time/12)%360) )*55);
 		for (var hI = 1; hI < 8; hI++) {
-			ctx.lineTo(Math.cos((hA*hI) - degToRad(angle) + degToRad((time/12)%360) )*58,Math.sin((hA*hI) - degToRad(angle) + degToRad((time/12)%360) )*58);
+			ctx.lineTo(Math.cos((hA*hI) - degToRad(angle) + degToRad((time/12)%360) )*55,Math.sin((hA*hI) - degToRad(angle) + degToRad((time/12)%360) )*55);
 		};
 		ctx.fill();
 		ctx.stroke();
@@ -189,6 +189,7 @@ function drawTank(x,y,angle,radius,color,barrels,bodyType,name) {
 			ctx.closePath();
 			ctx.restore();
 		};
+		
 	};
 
 	//main body
@@ -252,6 +253,28 @@ function drawTank(x,y,angle,radius,color,barrels,bodyType,name) {
 		ctx.closePath();
 
 	};
+
+
+
+
+	for (i = 0; i < barrels.length; i++) { //basic rectangle
+		if (barrels[i].barrelType == 4) { //auto turret
+			ctx.save();
+			ctx.rotate(degToRad(barrels[i].angle+time));
+			ctx.fillStyle = "#999999";
+			ctx.beginPath();
+			ctx.fillRect(0,(48-(barrels[i].width/2))-48,barrels[i].length*2,(barrels[i].width/2)*2);
+			ctx.strokeRect(0,(48-(barrels[i].width/2))-48,barrels[i].length*2,(barrels[i].width/2)*2);
+			ctx.arc(0,barrels[i].offsetX,barrels[i].width,0,2*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			ctx.closePath();
+			ctx.restore();
+		};
+	};
+
+
+
 
 	ctx.restore();
 	ctx.save();
