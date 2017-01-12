@@ -1,7 +1,7 @@
 
 var can = document.getElementById("canvas");
 var ctx = can.getContext('2d');
-ctx.font="bold 20px Ubuntu";
+
 
 
 
@@ -360,6 +360,7 @@ function drawGrid(x,y,width,height,slotSize,lineColor) {
 function renderStep(){
 	ctx.clearRect(0,0,canvas.width,canvas.height);
 	ctx.fillStyle = "#cdcdcd";
+	ctx.font="bold 20px Ubuntu";
 	ctx.fillRect(0,0,canvas.width,canvas.height);
 	drawGrid(-1*camX % 24,-1*camY % 24,canvas.width,canvas.height,24,"#c0c0c0");
 	
