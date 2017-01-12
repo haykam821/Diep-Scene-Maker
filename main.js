@@ -367,13 +367,15 @@ var tritrapbarr = [
 var machinegunbarr = [
 	{barrelType: 1, length: 45, width: 34, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
-var destroyerbarr = [{barrelType: 0, length: 42, width: 55, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}];
-var hybridbarr = [{barrelType: 0, length: 42, width: 55, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
-	{barrelType: 1, length: 34, width: 40, angle: 180, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}];
-var annibarr = [];
-var sprayerbarr = [
-	{barrelType: 0, length: 52, width: 18, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
-	{barrelType: 1, length: 45, width: 34, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
+var destroyerbarr = [
+	{barrelType: 0, length: 50, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+];
+var hybridbarr = [
+	{barrelType: 0, length: 50, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 34, width: 40, angle: 180, offsetX: 0, damage: 1, penetration: 1}
+];
+var annibarr = [
+	{barrelType: 0, length: 50, width: 47, angle: 0, offsetX: 0, damage: 1, penetration: 1}
 ];
 var asmasherbarr = [{barrelType: 4, length: 25, width: 25, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}];
 var gunnerbarr = [
@@ -426,6 +428,7 @@ var spreadbarr = [
 
 
 
+
 function getClassBarrels(className){
 	if (className == "basic"){
 		return basicbarr;
@@ -472,11 +475,11 @@ function getClassBarrels(className){
 			return quadbarr;
 		} else if (className == "ac"){
 		return [
-			{barrelType: 0, length: 34, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
+			{barrelType: 0, length: 34, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
 		];
 		} else if (className == "dom"){
 		return [
-			{barrelType: 3, length: 34, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
+			{barrelType: 3, length: 34, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
 		];
 		} else if (className == "ms"){
 		return [
