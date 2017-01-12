@@ -361,6 +361,7 @@ var hybridbarr = [{barrelType: 0, length: 42, width: 55, angle: 0, offsetX: 0, d
 	{barrelType: 1, length: 34, width: 40, angle: 180, offsetX: 0, damage: 1, penetration: 1}];
 var annibarr = [];
 var sprayerbarr = [];
+var asmasherbarr = [{barrelType: 4, length: 25, width: 25, angle: 90, offsetX: 0, damage: 1, penetration: 1}];
 
 
 
@@ -397,6 +398,8 @@ function getClassBarrels(className){
 		];
 		} else if (className == "octo"){
 		return octobarr;
+		} else if (className == "asmasher"){
+		return asmasherbarr;
 		} else if (className == 'quad'){
 			return quadbarr;
 		} else if (className == "ac"){
