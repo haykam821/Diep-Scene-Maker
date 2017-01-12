@@ -211,7 +211,11 @@ function addEntity(type,x,y,angle,color,health,name,level,barrels,bodyType,class
 
 
 
-
+var overtrapbarr = [
+    {barrelType: 2, length: 42, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1},
+    {barrelType: 1, length: 34, width: 40, angle: 120, offsetX: 0, damage: 1, penetration: 1},
+    {barrelType: 1, length: 34, width: 40, angle: 240, offsetX: 0, damage: 1, penetration: 1}
+];
 var basicbarr = [
 	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
 ];
@@ -345,6 +349,11 @@ var summonerbarr = [
 	{barrelType: 1, length: 30, width: 31, angle: 360, offsetX: 0, damage: 1, penetration: 1}
 ];
 var guardianbarr = [{barrelType: 1, length: 25, width: 30, angle: 0, offsetX: 0, damage: 1, penetration: 1}];
+var tritrapbarr = [
+    {barrelType: 2, length: 42, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1},
+    {barrelType: 2, length: 42, width: 40, angle: 120, offsetX: 0, damage: 1, penetration: 1},
+    {barrelType: 2, length: 42, width: 40, angle: 240, offsetX: 0, damage: 1, penetration: 1}
+];
 
 
 
@@ -356,6 +365,16 @@ function getClassBarrels(className){
 		return [
 			{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
 		];
+	} else if (className == 'ts'){
+		return triplebarr;
+	} else if (className == 'ovt'){
+		return overtrapbarr;
+	} else if (className == 'ts'){
+		return triplebarr;
+	} else if (className == 'ttrap'){
+		return tritrapbarr;
+	} else if (className == 'fg'){
+		return flankbarr;
 	} else if (className == 'spike' || className == 'landmine' || className == 'smasher'){
 		return [];
 		} else if (className == "flank"){
