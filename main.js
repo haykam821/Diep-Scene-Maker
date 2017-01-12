@@ -355,9 +355,10 @@ var tritrapbarr = [
     {barrelType: 2, length: 42, width: 40, angle: 240, offsetX: 0, damage: 1, penetration: 1}
 ];
 var machinegunbarr = [];
-var destroyerbarr = [];
-var hybridbarr = [];
-var annihilatorbarr = [];
+var destroyerbarr = [{barrelType: 0, length: 42, width: 55, angle: 0, offsetX: 0, damage: 1, penetration: 1}];
+var hybridbarr = [{barrelType: 0, length: 42, width: 55, angle: 0, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 34, width: 40, angle: 180, offsetX: 0, damage: 1, penetration: 1}];
+var annibarr = [];
 var sprayerbarr = [];
 
 
@@ -372,6 +373,12 @@ function getClassBarrels(className){
 		return machinegunbarr;
 	} else if (className == 'destroyer'){
 		return destroyerbarr;
+	} else if (className == 'hybrid'){
+		return hybridbarr;
+	} else if (className == 'anni'){
+		return annibarr;
+	} else if (className == 'sprayer'){
+		return sprayerbarr;
 	} else if (className == 'ovt'){
 		return overtrapbarr;
 	} else if (className == 'ts'){
