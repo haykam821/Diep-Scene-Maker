@@ -368,14 +368,14 @@ var machinegunbarr = [
 	{barrelType: 1, length: 45, width: 34, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var destroyerbarr = [
-	{barrelType: 0, length: 50, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 50, width: 40, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var hybridbarr = [
-	{barrelType: 0, length: 50, width: 40, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 1, length: 34, width: 40, angle: 180, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 50, width: 40, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 1, length: 34, width: 40, angle: 180, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var annibarr = [
-	{barrelType: 0, length: 50, width: 47, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 50, width: 47, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var asmasherbarr = [{barrelType: 4, length: 25, width: 25, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}];
 var gunnerbarr = [
@@ -404,11 +404,11 @@ var auto3barr = [
 	{barrelType: 5, length: 25, width: 25, angle: 240, offsetX: 0, offsetY: 42, damage: 1, penetration: 1}
 ];
 var streambarr = [
-	{barrelType: 0, length: 54, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 49, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 44, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 39, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 34, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 54, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 49, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 44, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 39, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 34, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var spreadbarr = [
 	{barrelType: 0, length: 30, width: 12, angle: 90, offsetX: 0, offsetY: 0, damage: 1, penetration: 1},
