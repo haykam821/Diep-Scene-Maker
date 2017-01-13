@@ -14,8 +14,8 @@
 
 	<div id="editor">
 		
-		<canvas id="canvas" height=720 style="position:absolute; left: 0px; top: 0px;" onclick="handleClick()"></canvas>
-		<input type="text" name="Level" id="levelInput" value="1" style='position:absolute; top:750px; left:100px;'></input>
+		<canvas id="canvas" width=1280 height=712 style="position:absolute; left: 0px; top: 0px;" onclick="handleClick()"></canvas>
+		<input type="text" name="Level" id="levelInput" value="1" style='position:absolute; top:740px; left:100px;'></input>
 	
 		<script>
 			window.onresize = function(){
@@ -24,8 +24,8 @@
 			
 		</script>
 	
-		<input type="color" name="Color" id="colorInput"  value="#00B2E1" style='position:absolute; top:770px; left:100px;'></input>	
-	<select id='colors' style='position:absolute; top:770px; left:165px;'><optgroup label='Teams'>
+		<input type="color" name="Color" id="colorInput"  value="#00B2E1" style='position:absolute; top:760px; left:100px;'></input>	
+	<select id='colors' style='position:absolute; top:760px; left:165px;'><optgroup label='Teams'>
 			<option value='#00B2E1'>Blue</option>
 			<option value='#F14E54'>Red</option>
 			<option value='#00E16E'>Green</option>
@@ -50,9 +50,9 @@
 					setColorInput(document.getElementById('colors').value);
 				}
 		</script>
-		<input type="text" name="Name" id="nameInput" value="Tank" style='position:absolute; top:830px; left:100px;'></input>
+		<input type="text" name="Name" id="nameInput" value="Tank" style='position:absolute; top:820px; left:100px;'></input>
 		<!--<input type="text" name="Class" id="classInput" value="basic" style='position:absolute; top:810px; left:100px;'></input>-->
-		<select id="classInput" style='position:absolute; top:850px; left:100px;'>
+		<select id="classInput" style='position:absolute; top:840px; left:100px;'>
 			
 			<optgroup label='Tanks'>
 			<option value="factory">Factory</option>
@@ -118,7 +118,7 @@
 				</optgroup>
 		</select>
 		<!--<input type="text" name="BodyType" id="btypeInput" value="circle" style='position:absolute; top:830px; left:100px;'></input>-->
-		<select id="btypeInput" style='position:absolute; top:870px; left:100px;'>
+		<select id="btypeInput" style='position:absolute; top:860px; left:100px;'>
 			<option value="circle">Circle</option>
 			<option value="square">Square</option>
 			<option value="triangle">Triangle</option>
@@ -128,11 +128,11 @@
 			<option value="spike">Spike</option>
 			<option value="dominator">Dominator</option>
 		</select>
-		<select id="etInput" style='position:absolute; top:890px; left:100px;'>
+		<select id="etInput" style='position:absolute; top:880px; left:100px;'>
 			<option value="tank">Tank</option>
 			<option value="shape">Shape</option>
 		</select>
-		<textarea name="BarrelArray" id="barrelsInput" value="[]" style='position:absolute; top:850px; left:500px;'></textarea>
+		<textarea name="BarrelArray" id="barrelsInput" value="[]" style='position:absolute; top:840px; left:500px;'></textarea>
 		<p style='position:absolute; top:730px; left:10px;'>Level: </p>
 		<p style='position:absolute; top:750px; left:10px;'>Tank Color: </p>
 		<p style='position:absolute; top:770px; left:10px;'>Barrel Color: </p>
@@ -144,11 +144,11 @@
 		<p style='position:absolute; top:850px; left:440px;'>Custom Barrel Array (optional): </p>
 		<p style='position:absolute; top:870px; left:440px;'>Canvas Width: </p>
 		<p style='position:absolute; top:890px; left:440px;'>Canvas Height: </p>
-		<button id="exportButton" onclick="exporttank()" style='position:absolute; top:730px; left:500px;'>Export to JSON</button>
-		<button id="importButton" onclick="importtank()" style='position:absolute; top:730px; left:620px;'>Import JSON</button>
-		<textarea id="scenecodeText" style='position:absolute; top:760px; left:500px;'></textarea>
-                <input type='number' style='position:absolute; top:830px; left:500px;'>
-                <input type='number' style='position:absolute; top:850px; left:500px;'>
+		<button id="exportButton" onclick="exporttank()" style='position:absolute; top:720px; left:500px;'>Export to JSON</button>
+		<button id="importButton" onclick="importtank()" style='position:absolute; top:720px; left:620px;'>Import JSON</button>
+		<textarea id="scenecodeText" style='position:absolute; top:750px; left:500px;'></textarea>
+                <input type='number' style='position:absolute; top:820px; left:500px;'>
+                <input type='number' style='position:absolute; top:840px; left:500px;'>
 		<script src='renderer.js'></script>
 	</div>
 
