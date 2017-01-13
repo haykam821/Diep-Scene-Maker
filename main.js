@@ -218,7 +218,7 @@ var overtrapbarr = [
     {barrelType: 1, length: 34, width: 40, angle: 240, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var basicbarr = [
-	{barrelType: 0, length: 42, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
+	{barrelType: 0, length: 43, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
 ];
 var acbarr = [
 	{barrelType: 0, length: 34, width: 19, angle: 0, offsetX: 0, offsetY: 0, damage: 1, penetration: 1}
