@@ -127,7 +127,7 @@ function handleOnLoad(){
 	sceneCodeText = document.getElementById("scenecodeText");
 	barrelArray = document.getElementById("barrelsInput");
 	entType = document.getElementById("etInput");
-	document.getElementById('canvas').width = window.innerWidth;
+	//document.getElementById('canvas').width = window.innerWidth;
 };
 
 
@@ -183,8 +183,8 @@ function handleMouseMove(evt){
 	
 	
 	
-	mouseX = evt.clientX+window.pageXOffset+camX;
-	mouseY = evt.clientY+window.pageYOffset+camY;
+	mouseX = evt.pageX-window.pageXOffset;
+	mouseY = evt.pageY-window.pageYOffset;
 	
 };
 	
@@ -474,9 +474,7 @@ function getClassBarrels(className){
 		} else if (className == 'quad'){
 			return quadbarr;
 		} else if (className == "ac"){
-		return [
-			{barrelType: 0, length: 34, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
-		];
+		return acbarr;
 		} else if (className == "dom"){
 		return [
 			{barrelType: 3, length: 34, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
