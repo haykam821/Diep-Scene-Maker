@@ -456,6 +456,8 @@ function getClassBarrels(className){
 		return tritrapbarr;
 	} else if (className == 'fg'){
 		return flankbarr;
+	} else if (className == 'circle'){
+		return [];
 	} else if (className == 'auto5'){
 		return auto5barr;
 	} else if (className == 'auto3'){
