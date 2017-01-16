@@ -1,0 +1,202 @@
+<html>
+
+
+	<!DOCTYPE html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+		<title>Diep.io scene maker</title>
+		<meta charset="utf8"></meta>
+	</head>
+
+		<script src='functions.js'></script>
+		<script src='main.js'></script>
+
+
+<body onload="handleOnLoad()">
+
+	<div id="editor">
+		
+		<canvas id="canvas" width=1280 height=720 style="position:absolute; left: 0px; top: 200px;" onclick="handleClick()"></canvas>
+		<button id="hideButton" onclick="setHeaderVisibility()" style='position:fixed; top:198px; left:10px;'>Hide</button>
+		<canvas id="canvas2" width=1280 height=200 style="position:fixed; left: 0px; top: 0px;" ></canvas>
+
+		<input type='number' name="Level" id="levelInput" value="1" style='position:fixed; top:5px; left:100px; width:121px;'></input>
+	
+		<input type="color" name="Color" id="colorInput"  value="#00B2E1" style='position:fixed; top:28px; left:196px; width:25px;'></input>	
+	<select id='colors' style='position:fixed; top:28px; left:100px;'>
+</optgroup><optgroup label='Playable Tank Colors'>
+			<option value='#00B2E1'>Blue</option>
+			<option value='#F14E54'>Red</option>
+			<option value='#00E16E'>Green</option>
+			<option value='#BF7FF5'>Purple</option>
+</optgroup><optgroup label='Other Tank Colors'>
+			<option value='#D48067'>Brown</option>
+			<option value='#FFE869'>Yellow</option>
+			<option value='#C0C0C0'>Fallen Gray</option>
+			<option value='#FA777A'>Defender Red</option>
+			<option value='#FFE869'>Summoner Yellow</option>
+			<option value='#EF7BDB'>Guardian Pink</option>
+</optgroup><optgroup label='Shape Colors'>
+			<option value='#FFE869'>Square Yellow</option>
+			<option value='#FA777A'>Triangle Red</option>
+			<option value='#7790F9'>Pentagon Blue</option>
+			<option value='#EF7BDB'>Crasher Pink</option>
+			<option value='#8DFD71'>Shape Green</option>
+			<option value='#FAC27C'>Necromancer Square Orange</option>
+</optgroup><optgroup label='Other'>
+			<option value='#555555'>Outline Gray</option>
+			<option value='#999999'>Barrel Gray</option>
+		</select>
+		<script>
+			document.getElementById('colors').onchange = function(){
+				setColorInput(document.getElementById('colors').value);
+			}
+		</script>
+		<input type="text" name="Name" id="nameInput" value="Tank" style='position:fixed; top:52px; left:100px; width:121px;'></input>
+
+		<select id="classInput" style='position:fixed; top:75px; left:100px; width:121px;'>
+</optgroup><optgroup label='Tanks'>
+			<option value="basic">Basic Tank</option>
+</optgroup><optgroup label='Twin Tree'>
+			<option value="twin">Twin</option>
+			<option value="triple">Triple Shot</option>
+			<option value="spread">Spreadshot</option>
+			<option value="triplet">Triplet</option>
+			<option value="penta">Pentashot</option>
+			<option value="twinflank">Twin Flank</option>
+			<option value="tripletwin">Triple Twin</option>
+</optgroup><optgroup label='Machine Gun Tree'>
+			<option value="machine">Machine Gun</option>
+			<option value="sprayer">Sprayer</option>
+			<option value="destroyer">Destroyer</option>
+			<option value="hybrid">Hybrid</option>
+			<option value="annihilator">Annihilator</option>
+			<option value="gunner">Gunner</option>
+</optgroup><optgroup label='Flank Guard Tree'>
+			<option value="flank">Flank Guard</option>
+			<option value="triangle">Tri-angle</option>
+			<option value="booster">Booster</option>
+			<option value="fighter">Fighter</option>
+</optgroup><optgroup label='Sniper Tree'>
+			<option value="sniper">Sniper</option>
+			<option value="assassin">Assassin</option>
+			<option value="hunter">Hunter</option>
+			<option value="predator">Predator</option>
+			<option value="trapper">Trapper</option>
+			<option value="tritrapper">Tri-Trapper</option>
+			<option value="autotrapper">Auto Trapper</option>
+			<option value="megatrapper">Mega Trapper</option>
+			<option value="overlord">Overlord</option>
+			<option value="manager">Manager</option>
+			<option value="necro">Necromancer</option>
+			<option value="factory">Factory</option>
+</optgroup><optgroup label='Smasher Tree'>
+			<option value="smasher">Smasher</option>
+			<option value="spike">Spike</option>
+			<option value="landmine">Landmine</option>
+			<option value="autosmasher">Auto Smasher</option>
+</optgroup><optgroup label='Multiple Tree Tanks'>
+			<option value="autogunner">Auto Gunner</option>
+			<option value="overtrapper">Overtrapper</option>
+			<option value="gunnertrapper">Gunner Trapper</option>
+			<option value="quad">Quad Tank</option>
+			<option value="octo">Octo Tank</option>
+			<option value="streamliner">Streamliner</option>
+</optgroup><optgroup label='Auto Tanks'>
+			<option value="autogunner">Auto Gunner</option>
+			<option value="autosmasher">Auto Smasher</option>
+			<option value="autotrapper">Auto Trapper</option>
+			<option value="auto3">Auto 3 (Not Available)</option>
+			<option value="auto5">Auto 5 (Not Available)</option>
+</optgroup><optgroup label='Other Tanks'>
+			<option value="ac">Arena Closer</option>
+			<option value="dom">Dominator</option>
+			<option value="ms">Mothership</option>
+			<option value="minion">Factory Drone</option>
+</optgroup><optgroup label='Bosses'>
+			<option value="guardian">Guardian</option>
+			<option value="summoner">Summoner</option>
+			<option value="overlord">Fallen Overlord</option>
+			<option value="booster">Fallen Booster</option>
+			<option value="defender">Defender</option>
+</optgroup><optgroup label='Shapes'>
+			<option value="square">Square</option>
+			<option value="triangleS">Triangle</option>
+			<option value="pentagon">Pentagon</option>
+</optgroup><optgroup label='Ammunition'>
+			<option value="drone">Drone</option>
+			<option value="square">Necro Drone</option>
+			<option value="bullet">Bullet</option>
+			<option value="trap">Trap</option>
+</optgroup><optgroup label='Other'>
+			<option value="turret">Auto Turret</option>
+			<option value="custom">Custom</option>
+		</select>
+
+		<select id="btypeInput" style='position:fixed; top:99px; left:100px; width:121px;'>
+			<option value="circle">Circle</option>
+			<option value="square">Square</option>
+			<option value="triangle">Triangle</option>
+			<option value="pentagon">Pentagon</option>
+			<option value="smasher">Smasher</option>
+			<option value="landmine">Landmine</option>
+			<option value="spike">Spike</option>
+			<option value="dominator">Dominator</option>
+		</select>
+		<select id="etInput" style='position:fixed; top:123px; left:100px; width:121px;'>
+			<option value="tank">Tank</option>
+			<option value="shape">Shape/Ammunition</option>
+		</select>
+		<textarea name="BarrelArray" id="barrelsInput" value="[]" style='position:fixed; top:95px; left:400px;'></textarea>
+		<p id="text1" style='position:fixed; top:-5px; left:10px;'>Level: </p>
+		<p id="text2" style='position:fixed; top:19px; left:10px;'>Color: </p>
+		<p id="text3" style='position:fixed; top:43px; left:10px;'>Name: </p>
+		<p id="text4" style='position:fixed; top:67px; left:10px;'>Class: </p>
+		<p id="text5" style='position:fixed; top:91px; left:10px;'>BodyType: </p>
+		<p id="text6" style='position:fixed; top:115px; left:10px;'>Entity Type: </p>
+		<p id="text7" style='position:fixed; top:85px; left:300px;'>Custom Barrel</p>
+		<p id="text8" style='position:fixed; top:105px; left:300px;'>Array (optional): </p>
+		<p id="text9" style='position:fixed; top:135px; left:300px;'>Canvas Width: </p>
+		<p id="text10" style='position:fixed; top:155px; left:300px;'>Canvas Height: </p>
+		<p id="tip" style='position:fixed; top:147px; left:10px; width:250;'>Tip</p>
+		<button id="exportButton" onclick="exporttank()" style='position:fixed; top:5px; left:300px;'>Export to JSON</button>
+		<button id="importButton" onclick="importtank()" style='position:fixed; top:5px; left:395px;'>Import JSON</button>
+		<button id="clearButton" onclick="clearscene()" style='position:fixed; top:5px; left:490px;'>Clear Scene</button>
+		<textarea id="scenecodeText" style='position:fixed; top:25px; left:300px;'></textarea>
+        <input type='number' id="sceneXW" value="800" style='position:fixed; top:145px; left:400px; width:90px;'>
+        <input type='number' id="sceneYW" value="600" style='position:fixed; top:165px; left:400px; width:90px;'>
+		<button id="applyButton" onclick="applySceneSize()" style='position:fixed; top:145px; left:490px;'>Apply</button>
+		<button id="resetButton" onclick="resetSceneSize()" style='position:fixed; top:165px; left:490px;'>Reset</button>
+		<button id="showButton" onclick="setHeaderVisibility()" style='position:fixed; top:-2px; left:10px; visibility:hidden;'>Show</button>
+		<div id="sliderBG" style='position:fixed; height:20px; width:60px; top:177px; left:670px; '></div>
+		<p id="on" style='position:fixed; top:169px; left:678px;'>On</p>
+		<p id="off" style='position:fixed; top:169px; left:704px;'>Off</p>
+		<p id="zoomText" style='position:fixed; top:-5px; left:625px;'>Zoom:</p>
+		<p id="zoomOut" style='position:fixed; top:-5px; left:740px;'>100%</p>
+		<p id="mousePos" style='position:fixed; bottom:-5px; left:5px;'>X: Y:</p>
+		<button id="togglePrev" onclick="togglePrev()" style='position:fixed; height:20px; width:30px; top:177px; left:700px;'></button>
+		<button id="toggleHelp" onclick="toggleHelp()" style='position:fixed; height:20px; width:50px; top:177px; left:800px;'>Help</button>
+		<input style='position:fixed; height:20px; width:69px; top:1px; left:665px;' id="zoom" type="range" min=".1" max="4" value=".75" step=".1">
+
+		<button id="convert" onclick="convert()" style='position:fixed; height:20px; width:100px; top:153px; left:825px;'>Convert</button>
+		<textarea id="ftbCode" style='position:fixed; top:50px; left:800px; height:100;'></textarea>
+		<p id="convertText" style='position:fixed; top:20px; left:800px; width:150px; text-align: center;'>Paste in FTB code.</p>
+
+
+		<div id="help" style='position:fixed; font-size: 12px; height:400px; width:300px; top:177px; left:850px; padding:5px;'>
+			<p>Controls</p>
+			<p><kbd>Left Mouse Button</kbd> - Place tank.</p>
+			<p><kbd>E</kbd> - Remove tank under mouse.</p>
+			<p>Hover over the tank preview to enlarge it.</p>
+		</div>		
+
+
+
+
+		<div  id="lights" style='position:fixed; background-image: linear-gradient(0deg, #000000 0%, #000000 100%); width:1280; height:800; top:-15; left:0; opacity:0.75;'></div>
+				<canvas id="canvas3" width=150 height=150 style="position:fixed; left: 625px; top: 25px;" onclick="handleClick()"></canvas>
+		<script src='renderer.js'></script>
+	</div>
+</body>
+</html>
