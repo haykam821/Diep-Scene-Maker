@@ -493,7 +493,7 @@ function renderStep(){
 
 
 	drawGrid(-600+(canvas3.width/2),-600+(canvas3.height/2)-(camY % (24*prevZoom))-(24*prevZoom),1000,1000,(24*prevZoom),"#c0c0c0","canvas3");
-
+	drawText('diep scene maker',0,0,"canvas");
 	drawTank(canvas3.width/2,canvas3.height/2,prevSpin,levelToSize(makeEntityLevel)*prevZoom,makeEntityColor,makeEntityBarrels,makeEntityBodyType,makeEntityName,1,"canvas3");
 
 	prevSpin = prevSpin + 2
