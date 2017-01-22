@@ -31,7 +31,7 @@
 		<button id="hideButton" onclick="setHeaderVisibility()" style='position:fixed; top:198px; left:10px;'>Hide</button>
 		<canvas id="canvas2" width=1280 height=200 style="position:fixed; left: 0px; top: 0px;" ></canvas>
 
-		<input type='number' name="Level" id="levelInput" value="1" style='position:fixed; top:5px; left:100px; width:121px;'></input>
+		<input type='number' name="Level" id="levelInput" value="45" style='position:fixed; top:5px; left:100px; width:121px;'></input>
 	
 		<input type="color" name="Color" id="colorInput"  value="#00B2E1" style='position:fixed; top:28px; left:196px; width:25px;'></input>	
 	<select id='colors' style='position:fixed; top:28px; left:100px;'>
@@ -59,6 +59,11 @@
 		</select>
 		<script>
 			document.getElementById('colors').onchange = function(){
+				ga('send', {hitType: 'event',
+        				eventCategory: 'Tank Settings',
+        				eventAction: 'color-change',
+       					eventLabel: `Changed color to '${document.getElementById('colors').value}'.`
+      				});
 				setColorInput(document.getElementById('colors').value);
 			}
 		</script>
@@ -194,7 +199,7 @@
 		<p id="zoomOut" style='position:fixed; top:-5px; left:740px;'>100%</p>
 		<p id="mousePos" style='position:fixed; bottom:-5px; left:5px;'>X: Y:</p>
 		<button id="togglePrev" onclick="togglePrev()" style='position:fixed; height:20px; width:30px; top:177px; left:700px;'></button>
-		<button id="toggleHelp" onclick="toggleHelp()" style='position:fixed; height:20px; width:50px; top:177px; left:800px;'>Help</button>
+		<button id="toggleHelp" onclick="toggleHelp(); ga('send', {hitType: 'event',eventCategory: 'Links',eventAction: 'help-toggle',eventLabel: `The help menu has been toggled.`});" style='position:fixed; height:20px; width:50px; top:177px; left:800px;'>Help</button>
 		<input style='position:fixed; height:20px; width:69px; top:1px; left:665px;' id="zoom" type="range" min=".1" max="4" value=".75" step=".1">
 
 		<button id="convert" onclick="convert()" style='position:fixed; height:20px; width:100px; top:153px; left:825px;'>Convert</button>
