@@ -58,12 +58,15 @@
 			<option value='#999999'>Barrel Gray</option>
 		</select>
 		<script>
-			document.getElementById('colors').onchange = function(){
+			document.getElementById('color').onchange = function(){
 				ga('send', {hitType: 'event',
         				eventCategory: 'Tank Settings',
         				eventAction: 'color-change',
        					eventLabel: `Changed color to '${document.getElementById('colors').value}'.`
       				});
+			}
+			
+			document.getElementById('colors').onchange = function(){
 				setColorInput(document.getElementById('colors').value);
 			}
 		</script>
