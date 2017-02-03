@@ -116,6 +116,7 @@ function step(){
 		}
 
 		document.getElementById("help").style.opacity = helpMult
+		document.getElementById("help").style.visiblity = help;
 		document.getElementById("help").style.fontSize = 12*helpMult
 		document.getElementById("help").style.width = 300*helpMult
 		document.getElementById("help").style.height = 400*helpMult
