@@ -548,6 +548,8 @@ function getClassBarrels(className){
 		return trapbarr;
 		} else if (className == "megatrapper"){
 		return megatrapbarr;
+		} else if (className == "overseer"){
+		return overseerbarr;
 		} else if (className == "overlord"){
 		return overlordbarr;
 		} else if (className == "manager"){
