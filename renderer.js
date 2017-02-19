@@ -566,8 +566,8 @@ function renderStep(){
 		ctx.globalAlpha = 1;
 	};
 	if (!(document.getElementById('ftbCode').value=='nomark')){
-		ctx.globalAlpha = 0.5;
-		drawText('diep scene maker',100,45,"canvas");
+		ctx.globalAlpha = 0.1;
+		drawText('dsm',100,45,"canvas");
 		ctx.globalAlpha = 1;
 	}
 };
