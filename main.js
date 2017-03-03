@@ -359,6 +359,12 @@ function addEntity(type,x,y,angle,color,health,name,level,barrels,bodyType,class
 
 
 
+var tankjson = {};
+
+tankjson.blaster = [
+	[{"barrelType": 1, "length": 47, "width": 28, "angle": 0, "offsetX": 0, "damage": 1, "penetration": 1},
+	{"barrelType": 0, "length": 40, "width": 33, "angle": 0, "offsetX": 0, "damage": 1, "penetration": 1}]
+]
 
 var basicbarr = [
 	{barrelType: 0, length: 45, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
@@ -431,7 +437,7 @@ var fighterbarr = [
 	{barrelType: 0, length: 38, width: 19, angle: 90, offsetX: 0, damage: 1, penetration: 1},
 	{barrelType: 0, length: 38, width: 19, angle: 270, offsetX: 0, damage: 1, penetration: 1}
 ];
-var boosterbarr= [
+var boosterbarr = [
 	{barrelType: 0, length: 45, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
 	{barrelType: 0, length: 34, width: 19, angle: 138, offsetX: 0, damage: 1, penetration: 1},
 	{barrelType: 0, length: 34, width: 19, angle: 222, offsetX: 0, damage: 1, penetration: 1},
@@ -447,7 +453,7 @@ var twinflankbarr = [
 	{barrelType: 0, length: 45, width: 19, angle: 0, offsetX: 24, damage: 1, penetration: 1},
 	{barrelType: 0, length: 45, width: 19, angle: 180, offsetX: -24, damage: 1, penetration: 1},
 	{barrelType: 0, length: 45, width: 19, angle: 180, offsetX: 24, damage: 1, penetration: 1}
-];
+];t
 var tripletwinbarr = [
 	{barrelType: 0, length: 45, width: 19, angle: 0, offsetX: -24, damage: 1, penetration: 1},
 	{barrelType: 0, length: 45, width: 19, angle: 0, offsetX: 24, damage: 1, penetration: 1},
@@ -496,7 +502,9 @@ var guardianbarr = [{barrelType: 1, length: 25, width: 30, angle: 0, offsetX: 0,
 
 
 function getClassBarrels(className){
-	if (className == "basic"){
+	if (tankjson[className]!==undefined){
+		return tankjson[className]
+	} else if (className == "basic"){
 		return [
 			{barrelType: 0, length: 45, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1}
 		];
