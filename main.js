@@ -453,7 +453,7 @@ var twinflankbarr = [
 	{barrelType: 0, length: 45, width: 19, angle: 0, offsetX: 24, damage: 1, penetration: 1},
 	{barrelType: 0, length: 45, width: 19, angle: 180, offsetX: -24, damage: 1, penetration: 1},
 	{barrelType: 0, length: 45, width: 19, angle: 180, offsetX: 24, damage: 1, penetration: 1}
-];t
+];
 var tripletwinbarr = [
 	{barrelType: 0, length: 45, width: 19, angle: 0, offsetX: -24, damage: 1, penetration: 1},
 	{barrelType: 0, length: 45, width: 19, angle: 0, offsetX: 24, damage: 1, penetration: 1},
