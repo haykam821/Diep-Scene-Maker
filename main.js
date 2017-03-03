@@ -362,8 +362,8 @@ function addEntity(type,x,y,angle,color,health,name,level,barrels,bodyType,class
 var tankjson = {};
 
 tankjson.blaster = [
-	[{barrelType: 1, length: 47, width: 28, angle: 0, offsetX: 0, damage: 1, penetration: 1},
-	{barrelType: 0, length: 40, width: 33, angle: 0, offsetX: 0, damage: 1, penetration: 1}]
+	{barrelType: 1, length: 47, width: 28, angle: 0, offsetX: 0, damage: 1, penetration: 1},
+	{barrelType: 0, length: 40, width: 33, angle: 0, offsetX: 0, damage: 1, penetration: 1}
 ]
 
 var basicbarr = [
