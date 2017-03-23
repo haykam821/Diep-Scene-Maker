@@ -14,7 +14,9 @@
 
 </script>
 	<script src="functions.js"></script><script src="main.js"></script></head>
-
+	<script>
+		if((window && window.process && window.process.type) !== undefined){document.getElementById('desktop').parentNode.removeChild(document.getElementById('desktop'))}
+	</script>
 		
 		
 
@@ -253,7 +255,7 @@
 			<option value="shape">Shape/Ammunition</option>
 		</select>
 		<textarea name="BarrelArray" id="barrelsInput" value="[]" style="position:fixed; top:95px; left:400px;"></textarea>
-		<p id="desktop" style="position:fixed; top:155px; left:10px;" onload="if((window &amp;&amp; window.process &amp;&amp; window.process.type) !== undefined){document.getElementById('desktop').parentNode.removeChild(document.getElementById('desktop'))}">Download the new desktop app for macOS.</p>
+		<p id="desktop" style="position:fixed; top:155px; left:10px;">Download the new desktop app for macOS.</p>
 		<p id="text1" style="position:fixed; top:-5px; left:10px;">Level:</p>
 		<p id="text2" style="position:fixed; top:19px; left:10px;">Color: </p>
 		<p id="text3" style="position:fixed; top:43px; left:10px;">Name: </p>
