@@ -447,7 +447,7 @@ function renderStep(){
 	prevZoom = document.getElementById("zoom").value
 	document.getElementById("zoomOut").value
 	document.getElementById("zoomOut").innerHTML = (prevZoom*100)+"%"
-	document.getElementById("canvas3").style.left = 625-prevOffset
+	document.getElementById("canvas3").style.left = 1065-prevOffset
 	document.getElementById("canvas3").style.width = 150+(prevOffset*2)
 
 	//Draw Top
