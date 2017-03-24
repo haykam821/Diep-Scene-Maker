@@ -103,7 +103,7 @@ function step(){
 	if (isLoaded){
 		document.getElementById("mousePos").innerHTML = "X: " + mouseX + " Y: " + mouseY
 
-		if (head && prevOn && mouseX > 625 && mouseX < 775 && mouseY > 25 && mouseY < 175) {
+		if (head && prevOn && mouseX > 1065 && mouseX < 1215 && mouseY > 25 && mouseY < 175) {
 			prevOffset = ((prevOffset-prevFullZoom)/1.35)+prevFullZoom
 		} else {
 			prevOffset = prevOffset/1.3
