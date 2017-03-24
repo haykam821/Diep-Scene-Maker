@@ -34,8 +34,6 @@ function setColorInput(color){
 function applySceneSize(){
 	canvas.width = sceneXW.value
 	canvas.height = sceneYW.value
-
-	canvas2.width = window.innerWidth
 };
 
 function resetSceneSize(){
@@ -710,4 +708,8 @@ function getClassBodyType(className){
 	} else {
 		return 'circle';
 	};
+};
+
+window.onresize = function(){
+	canvas2.width = window.innerWidth
 };
