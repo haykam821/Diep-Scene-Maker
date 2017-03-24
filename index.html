@@ -3,7 +3,7 @@
 		<link rel="shortcut icon" href="/Diep-Scene-Maker/favicon.ico" type="image/x-icon">
 		<title>Diep.io scene maker</title>
 		<meta charset="utf8">
-	<script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
+	<script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,10 +13,10 @@
   ga('send', 'pageview');
 
 </script>
-	<script src="functions.js"></script><script src="main.js"></script></head>
-	<script>
+	<script src="functions.js"></script><script src="main.js"></script><script>
 		if((window && window.process && window.process.type) !== undefined){document.getElementById('desktop').parentNode.removeChild(document.getElementById('desktop'))}
-	</script>
+	</script></head>
+	
 		
 		
 
@@ -256,7 +256,8 @@
 		</select>
 		<textarea name="BarrelArray" id="barrelsInput" value="[]" style="position:fixed; top:95px; left:400px;"></textarea>
 		<p id="desktop" style="position:fixed; top:155px; left:10px;">Download the new desktop app for macOS.</p>
-		<p id="text1" style="position:fixed; top:-5px; left:10px;">Level:</p>
+		<p id="text1" style="position:fixed; top:-5px; left:10px;">Level:</p><p id="gridlabel1" style="position:fixed; top:-5px; left:290px;">Grid Background:</p>
+
 		<p id="text2" style="position:fixed; top:19px; left:10px;">Color: </p>
 		<p id="text3" style="position:fixed; top:43px; left:10px;">Name: </p>
 		<p id="text4" style="position:fixed; top:67px; left:10px;">Class:</p>
@@ -267,9 +268,9 @@
 		<p id="text9" style="position:fixed; top:135px; left:300px;">Canvas Width: </p>
 		<p id="text10" style="position:fixed; top:155px; left:300px;">Canvas Height: </p>
 		<p id="tip" style="position:fixed; top:147px; left:10px; width:250;"></p>
-		<button id="exportButton" onclick="exporttank()" style="position:fixed; top:5px; left:300px;">Export to JSON</button>
-		<button id="importButton" onclick="importtank()" style="position:fixed; top:5px; left:395px;">Import JSON</button>
-		<button id="clearButton" onclick="clearscene()" style="position:fixed; top:5px; left:490px;">Clear Scene</button>
+		<button id="exportButton" onclick="exporttank()" style="position:fixed; top:5px; left:555px;">Export to JSON</button>
+		<button id="importButton" onclick="importtank()" style="position:fixed; top:5px; left:650px;">Import JSON</button>
+		<button id="clearButton" onclick="clearscene()" style="position:fixed; top:5px; left:745px;">Clear Scene</button>
 		<textarea id="scenecodeText" style="position:fixed; top:25px; left:300px;"></textarea>
         <input type="number" id="sceneXW" value="800" style="position:fixed; top:145px; left:400px; width:90px;">
         <input type="number" id="sceneYW" value="600" style="position:fixed; top:165px; left:400px; width:90px;">
@@ -281,14 +282,14 @@
 		<p id="off" style="position: fixed; top: 168px; left: 704px;">Off</p>
 		<p id="zoomText" style="position: fixed; top: -6px; left: 625px;">Zoom:</p>
 		<p id="zoomOut" style="position: fixed; top: -6px; left: 740px;">80%</p>
-		<p id="mousePos" style="position:fixed; bottom:-5px; left:5px;">X: 1099 Y: 10</p>
+		<p id="mousePos" style="position:fixed; bottom:-5px; left:5px;">X: 1091 Y: 13</p>
 		<button id="togglePrev" onclick="togglePrev()" style="position:fixed; height:20px; width:30px; top:177px; left:700px;"></button>
-		<button id="toggleHelp" onclick="toggleHelp(); ga('send', {hitType: 'event',eventCategory: 'Links',eventAction: 'help-toggle',eventLabel: `The help menu has been toggled.`});" style="position:fixed; height:21px; width:100px; top:165px; left:835px;">Help</button>
+		<button id="toggleHelp" onclick="toggleHelp(); ga('send', {hitType: 'event',eventCategory: 'Links',eventAction: 'help-toggle',eventLabel: `The help menu has been toggled.`});" style="position:fixed; height:21px; width:100px; top:165px; left:905px;">Help</button>
 		<input style="position:fixed; height:20px; width:69px; top:1px; left:665px;" id="zoom" type="range" min=".1" max="4" value=".75" step=".1">
 
-		<button id="convert" onclick="convert()" style="position:fixed; height:21px; width:100px; top:145px; left:835px;">Convert</button>
-		<textarea id="ftbCode" style="position:fixed; top:25px; left:810px; height:115;"></textarea>
-		<p id="convertText" style="position:fixed; top:-6px; left:810px; width:150px; text-align: center;">Paste in a FTB code.</p>
+		<button id="convert" onclick="convert()" style="position:fixed; height:21px; width:100px; top:145px; left:905px;">Convert</button>
+		<textarea id="ftbCode" style="position:fixed; top:25px; left:880px; height:115;"></textarea>
+		<p id="convertText" style="position:fixed; top:-6px; left:880px; width:150px; text-align: center;">Paste in a FTB code.</p>
 
 
 		<div id="help" style="position: fixed; font-size: 0px; height: 0px; width: 0px; top: 177px; left: 850px; padding: 5px; opacity: 0;">
@@ -301,7 +302,7 @@
 
 
 
-		<div id="lights" style="position: fixed; background-image: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%); width: 1280px; height: 800px; top: -15px; left: 0px; opacity: 1.06545e-68; visibility: hidden;"></div>
+		<div id="lights" style="position: fixed; background-image: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%); width: 1280px; height: 800px; top: -15px; left: 0px; opacity: 1.98331e-44; visibility: hidden;"></div>
 				<canvas id="canvas3" width="150" height="150" style="position: fixed; left: 625px; top: 25px; width: 150px;" onclick="handleClick()"></canvas>
 		<script src="renderer.js"></script>
 	</div>
@@ -309,5 +310,6 @@
 
 
 Yes, I did broke it. Contact /u/haykam821 on reddit if you'd like it to be fixed.
+
 
 </body></html>
