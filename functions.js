@@ -36,6 +36,8 @@ function setHeaderVisibility(){
 		document.getElementById("applyButton").style.visibility = "hidden"
 		document.getElementById("resetButton").style.visibility = "hidden"
 
+		document.getElementById("desktop").style.visibility = "hidden"
+		
 		document.getElementById("text1").style.visibility = "hidden"
 		document.getElementById("text2").style.visibility = "hidden"
 		document.getElementById("text3").style.visibility = "hidden"
@@ -46,6 +48,7 @@ function setHeaderVisibility(){
 		document.getElementById("text8").style.visibility = "hidden"
 		document.getElementById("text9").style.visibility = "hidden"
 		document.getElementById("text10").style.visibility = "hidden"
+		document.getElementById("gridlabel1").style.visibility = "hidden"
 		document.getElementById("hideButton").style.visibility = "hidden"
 		document.getElementById("showButton").style.visibility = "visible"
 		document.getElementById("canvas3").style.visibility = "hidden"
@@ -85,6 +88,8 @@ function setHeaderVisibility(){
 		document.getElementById("sceneYW").style.visibility = "visible"
 		document.getElementById("applyButton").style.visibility = "visible"
 		document.getElementById("resetButton").style.visibility = "visible"
+		
+		document.getElementById("desktop").style.visibility = "visible"
 
 		document.getElementById("text1").style.visibility = "visible"
 		document.getElementById("text2").style.visibility = "visible"
@@ -96,6 +101,7 @@ function setHeaderVisibility(){
 		document.getElementById("text8").style.visibility = "visible"
 		document.getElementById("text9").style.visibility = "visible"
 		document.getElementById("text10").style.visibility = "visible"
+		document.getElementById("gridlabel1").style.visibility = "visible"
 		document.getElementById("canvas3").style.visibility = "visible"
 		document.getElementById("hideButton").style.visibility = "visible"
 		document.getElementById("showButton").style.visibility = "hidden"
