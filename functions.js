@@ -1,11 +1,11 @@
 function setAvailableTanks() {
 	if (makeEntityType == "shape") {
-		document.getElementById("tip").innerHTML = 'Note: Bullets and traps have their size in pixels, rather than level.'
-		document.getElementById("text1").innerHTML = "Size:"
+		//document.getElementById("tip").innerHTML = 'Note: Bullets and traps have their size in pixels, rather than level.'
+		document.getElementById("text1").innerHTML = "Size (pixels):"
 		document.getElementById("text4").innerHTML = "Shape:"
 		document.getElementById("classInput").innerHTML = document.getElementById("shapes").innerHTML
 	} else {
-		document.getElementById("tip").innerHTML = ""
+		//document.getElementById("tip").innerHTML = ""
 		document.getElementById("text1").innerHTML = "Level:"
 		document.getElementById("text4").innerHTML = "Class:"
 		document.getElementById("classInput").innerHTML = document.getElementById("tanks").innerHTML
