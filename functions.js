@@ -1,3 +1,5 @@
+var ipcRenderer = require('electron').ipcRenderer;
+
 function setAvailableTanks() {
 	if (makeEntityType == "shape") {
 		//document.getElementById("tip").innerHTML = 'Note: Bullets and traps have their size in pixels, rather than level.'
