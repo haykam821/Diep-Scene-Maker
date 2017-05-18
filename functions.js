@@ -151,3 +151,11 @@ function convertFTB(FTBi) {
 
 // START MESSAGES FOR ELECTRON COMMANDS
 ipcRenderer.on('setHeaderVisibility', setHeaderVisbility);
+ipcRenderer.on('decreaseLevel', function() {
+	if (!(document.getElementById('levelInput').value <= 1)) {
+		document.getElementById('levelInput').value--
+	}
+});
+ipcRenderer.on('increaseLevel', function() {
+	document.getElementById('levelInput').value++
+});
