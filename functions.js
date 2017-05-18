@@ -12,6 +12,8 @@ function setAvailableTanks() {
 	}
 }
 
+ipcRenderer.on('setHeaderVisibility', setHeaderVisbility);
+
 function setHeaderVisibility(){
 	if (head){
 		head = false
