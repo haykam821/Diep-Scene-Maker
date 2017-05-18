@@ -14,8 +14,6 @@ function setAvailableTanks() {
 	}
 }
 
-ipcRenderer.on('setHeaderVisibility', setHeaderVisbility);
-
 function setHeaderVisibility(){
 	if (head){
 		head = false
@@ -150,3 +148,6 @@ function convertFTB(FTBi) {
 	}
 	return Out
 }
+
+// START MESSAGES FOR ELECTRON COMMANDS
+ipcRenderer.on('setHeaderVisibility', setHeaderVisbility);
