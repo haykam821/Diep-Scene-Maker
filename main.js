@@ -99,7 +99,8 @@ function togglePrev() {
 
 function step(){
 	if (isLoaded){
-		document.getElementById("mousePos").innerHTML = "X: " + mouseX + " Y: " + mouseY
+		var headHeight = head ? document.getElementById('canvas2').height : 0;
+		document.getElementById("mousePos").innerHTML = "X: " + mouseX + " Y: " + (mouseY - headHeight)
 
 		if (head && prevOn && mouseX > 1065 && mouseX < 1215 && mouseY > 25 && mouseY < 175) {
 			prevOffset = ((prevOffset-prevFullZoom)/1.35)+prevFullZoom
