@@ -150,7 +150,7 @@ function convertFTB(FTBi) {
 }
 
 // START MESSAGES FOR ELECTRON COMMANDS
-ipcRenderer.on('setHeaderVisibility', setHeaderVisbility);
+ipcRenderer.on('setHeaderVisibility', setHeaderVisibility);
 ipcRenderer.on('decreaseLevel', function() {
 	if (!(document.getElementById('levelInput').value <= 1)) {
 		document.getElementById('levelInput').value--
