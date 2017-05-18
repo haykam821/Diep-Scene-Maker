@@ -229,7 +229,8 @@ function handleOnLoad(){
 	sceneCodeText = document.getElementById("scenecodeText");
 	barrelArray = document.getElementById("barrelsInput");
 	entType = document.getElementById("etInput");
-	//document.getElementById('canvas').width = window.innerWidth;
+	document.getElementById('canvas2').width = window.innerWidth;
+	document.getElementById('canvas').width = window.innerWidth;
 };
 
 function handleClick(evt){
