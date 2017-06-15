@@ -205,7 +205,7 @@ function drawTank(x,y,angle,radius,color,barrels,bodyType,name,healF,ctxt) {
 	ctxx.rotate(0);
 	//ctxx.scale(radius/48,radius/48);
 	ctxx.fillStyle = parseInt(color);
-	ctxx.borderStyle = color/4;
+	ctxx.borderStyle = '#555555';
 	console.log(ctxx.fillStyle, ctxx.borderStyle); // temporary
 	ctxx.lineJoin = "round";
 	if (bodyType == "circle" || bodyType == "smasher" || bodyType == "landmine" || bodyType == "spike" || bodyType == "dominator") { //circle for all circular types
