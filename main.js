@@ -15,6 +15,10 @@ var helpMult = 0
 var help = false
 var prevFullZoom = 100
 
+if (location.pathname !== "/Diep-Scene-Maker/") {
+	document.getElementsByTagName('body')[0].removeChild(document.getElementById('editor'))
+}
+
 function toggle(bool) {
 	if (bool) {
 		return false
